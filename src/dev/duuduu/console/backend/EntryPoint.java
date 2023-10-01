@@ -1,6 +1,7 @@
 package dev.duuduu.console.backend;
 
 import dev.duuduu.console.DuuDuuEngine;
+import dev.duuduu.console.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,8 +33,18 @@ public class EntryPoint {
         if (arguments.contains("--THREADS")) {
             final int threadModeIndex = arguments.indexOf("--THREADS");
             final String threadMode = arguments.get(threadModeIndex + 1);
+            DuuDuuEngine.ENGINE.THREAD_MODE = ThreadMode.fromString(threadMode);
+        }
+
+        // load engine here...
+
+        // either load console or game
+        if (arguments.contains("CONSOLE")) {
+
+        } else {
 
         }
+
     }
 
 }
