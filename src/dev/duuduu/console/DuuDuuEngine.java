@@ -1,10 +1,11 @@
-package dev.duuduu.console.backend;
+package dev.duuduu.console;
 
 public enum DuuDuuEngine {
 
     ENGINE;
 
     DuuDuuEngine() {
+        debugInitialized = false;
         debug = false;
 
         resolutionWidth = DEFAULT_RESOLUTION_WIDTH;
@@ -12,9 +13,12 @@ public enum DuuDuuEngine {
     }
 
     // - DEBUG ---------------------------------------------------------------------------------------------------------
+    private boolean debugInitialized;
     private boolean debug;
 
-    final void initializeDebug(boolean debug) {
+    public final void initializeDebug(boolean debug) {
+        if (debugInitialized) return;
+        debugInitialized = true;
         this.debug = debug;
     }
 
@@ -28,17 +32,20 @@ public enum DuuDuuEngine {
     private int resolutionHeight;
     public static final int DEFAULT_RESOLUTION_HEIGHT = 720;
 
-    public final void setResolution(int width, int height) {
+    public final void SET_RESOLUTION(int width, int height) {
         this.resolutionWidth = width;
         this.resolutionHeight = height;
     }
 
-    public final int getResolutionWidth() {
+    public final int RESOLUTION_WIDTH() {
         return resolutionWidth;
     }
 
-    public final int getResolutionHeight() {
+    public final int RESOLUTION_HEIGHT() {
         return resolutionHeight;
     }
+
+    // - TPS -----------------------------------------------------------------------------------------------------------
+    public int TPS = 60;
 
 }
