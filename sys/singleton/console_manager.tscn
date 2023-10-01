@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bb7jsgkk1fx1e"]
-
-[ext_resource type="Script" path="res://sys/singleton/ConsoleManager.gd" id="1_m0ipl"]
-
-[node name="ConsoleManager" type="Node"]
-process_mode = 3
-script = ExtResource("1_m0ipl")

@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://chbhfa84iwlhl"]
-
-[ext_resource type="Script" path="res://sys/singleton/ControllerInput.gd" id="1_pr6cv"]
-
-[node name="ControllerInput" type="Node"]
-process_mode = 3
-script = ExtResource("1_pr6cv")
