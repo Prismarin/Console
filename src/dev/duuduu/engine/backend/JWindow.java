@@ -1,5 +1,6 @@
-package dev.duuduu.engine;
+package dev.duuduu.engine.backend;
 
+import dev.duuduu.engine.DuuDuuEngine;
 import dev.duuduu.engine.backend.InputSystem;
 import dev.duuduu.engine.backend.Window;
 

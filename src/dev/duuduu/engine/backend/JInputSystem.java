@@ -1,12 +1,11 @@
-package dev.duuduu.engine;
+package dev.duuduu.engine.backend;
 
-import dev.duuduu.console.ControllerButtons;
 import dev.duuduu.engine.backend.InputSystem;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class JInputSystem extends InputSystem implements KeyListener, ControllerButtons {
+public class JInputSystem extends InputSystem implements KeyListener {
 
     private boolean[] pressedKeys;
 

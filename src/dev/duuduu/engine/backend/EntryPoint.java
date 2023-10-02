@@ -1,8 +1,7 @@
 package dev.duuduu.engine.backend;
 
+import dev.duuduu.console.ConsoleJInputSystem;
 import dev.duuduu.engine.DuuDuuEngine;
-import dev.duuduu.engine.JInputSystem;
-import dev.duuduu.engine.JWindow;
 import dev.duuduu.engine.ThreadMode;
 
 import java.lang.reflect.InvocationTargetException;
@@ -13,7 +12,7 @@ public class EntryPoint {
 
     /**
      *
-     * @param args DEBUG CONSOLE --RESOLUTION [WIDTH = 1280] [HEIGHT = 720] --TPS [TPS = 60] --THREADS [MODE = multi]
+     * @param args DEBUG CONSOLE --RESOLUTION [WIDTH = 1280] [HEIGHT = 720] --TPS [TPS = 60] --THREADS [MODE = multi] --LEGACY
      */
     public static void main(String[] args)
             throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
@@ -40,6 +39,8 @@ public class EntryPoint {
             DuuDuuEngine.ENGINE.THREAD_MODE = ThreadMode.fromString(threadMode);
         }
 
+        boolean jdkGraphics = arguments.contains("--LEGACY");
+
         // load engine here...
         DuuDuuEngine.ENGINE.initWindow(JWindow.class);
 
@@ -49,6 +50,7 @@ public class EntryPoint {
             DuuDuuEngine.ENGINE.initInputSystem(JInputSystem.class);
         } else {
             // load console
+            DuuDuuEngine.ENGINE.initInputSystem(ConsoleJInputSystem.class);
         }
 
     }

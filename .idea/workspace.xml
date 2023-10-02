@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="">
-      <change afterPath="K:/Console/src/dev/duuduu/console/Console.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/console/ControllerButtons.java" afterDir="false" />
       <change beforePath="K:/Console/.idea/workspace.xml" beforeDir="false" afterPath="K:/Console/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/JInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/JInputSystem.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/JInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JInputSystem.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/JWindow.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +51,7 @@
     <configuration name="EntryPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.duuduu.engine.backend.EntryPoint" />
       <module name="Console" />
+      <option name="PROGRAM_PARAMETERS" value="DEBUG" />
       <option name="WORKING_DIRECTORY" value="K:/Console" />
       <extension name="coverage">
         <pattern>
