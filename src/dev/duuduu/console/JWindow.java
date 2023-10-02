@@ -1,20 +1,26 @@
 package dev.duuduu.console;
 
+import dev.duuduu.console.backend.InputSystem;
 import dev.duuduu.console.backend.Window;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyListener;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 
 public class JWindow extends Window {
 
     private JFrame frame;
     private Canvas canvas;
+    private InputSystem inputSystem;
 
     @Override
     public void init(String... args) {
         frame = new JFrame();
         frame.setTitle(args[0]);
         frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         canvas = new Canvas();
         canvas.setFocusable(false);
         Toolkit tk = Toolkit.getDefaultToolkit();
@@ -29,6 +35,16 @@ public class JWindow extends Window {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+    }
+
+    @Override
+    public <T extends InputSystem> void setInputSystem(Class<T> inputSystemClazz)
+            throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        if (inputSystem == null) return;
+        Constructor<T> constructor = inputSystemClazz.getConstructor();
+        inputSystem = constructor.newInstance();
+        if (!(inputSystem instanceof KeyListener)) throw new RuntimeException("Wrong Input System for this Window");
+        frame.addKeyListener((KeyListener) inputSystem);
     }
 
     @Override
