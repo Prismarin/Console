@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="">
-      <change afterPath="K:/Console/src/dev/duuduu/console/JInputSystem.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/console/backend/InputSystem.java" afterDir="false" />
       <change beforePath="K:/Console/.idea/workspace.xml" beforeDir="false" afterPath="K:/Console/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/console/DuuDuuEngine.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/DuuDuuEngine.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/console/JWindow.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/JWindow.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/console/backend/Window.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/backend/Window.java" afterDir="false" />
     </list>

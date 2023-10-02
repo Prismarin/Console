@@ -13,7 +13,6 @@ public class JWindow extends Window {
 
     private JFrame frame;
     private Canvas canvas;
-    private InputSystem inputSystem;
 
     @Override
     public void init(String... args) {
@@ -44,6 +43,7 @@ public class JWindow extends Window {
         Constructor<T> constructor = inputSystemClazz.getConstructor();
         inputSystem = constructor.newInstance();
         if (!(inputSystem instanceof KeyListener)) throw new RuntimeException("Wrong Input System for this Window");
+        inputSystem.init();
         frame.addKeyListener((KeyListener) inputSystem);
     }
 
@@ -55,6 +55,16 @@ public class JWindow extends Window {
     @Override
     public void loop() {
 
+    }
+
+    @Override
+    public int getWidth() {
+        return canvas.getWidth();
+    }
+
+    @Override
+    public int getHeight() {
+        return canvas.getHeight();
     }
 
 }

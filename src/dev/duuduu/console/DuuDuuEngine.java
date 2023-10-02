@@ -1,5 +1,6 @@
 package dev.duuduu.console;
 
+import dev.duuduu.console.backend.InputSystem;
 import dev.duuduu.console.backend.Window;
 
 import java.lang.reflect.Constructor;
@@ -68,6 +69,28 @@ public enum DuuDuuEngine {
         Constructor<T> constructor = windowClazz.getConstructor();
         window = constructor.newInstance();
         window.init("Test");
+    }
+
+    public final int WINDOW_WIDTH() {
+        return window.getWidth();
+    }
+
+    public final int WINDOW_HEIGHT() {
+        return window.getHeight();
+    }
+
+    // - INPUT ---------------------------------------------------------------------------------------------------------
+
+    private InputSystem inputSystem;
+
+    public final <T extends InputSystem> void initInputSystem(Class<T> inputSystemClazz)
+            throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        window.setInputSystem(inputSystemClazz);
+        inputSystem = window.inputSystem;
+    }
+
+    public final boolean isKeyPressed(int... keys) {
+        return inputSystem.isKeyPressed(keys);
     }
 
 }
