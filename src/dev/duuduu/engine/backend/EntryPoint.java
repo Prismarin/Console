@@ -1,8 +1,9 @@
-package dev.duuduu.console.backend;
+package dev.duuduu.engine.backend;
 
-import dev.duuduu.console.DuuDuuEngine;
-import dev.duuduu.console.JWindow;
-import dev.duuduu.console.ThreadMode;
+import dev.duuduu.engine.DuuDuuEngine;
+import dev.duuduu.engine.JInputSystem;
+import dev.duuduu.engine.JWindow;
+import dev.duuduu.engine.ThreadMode;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -43,10 +44,11 @@ public class EntryPoint {
         DuuDuuEngine.ENGINE.initWindow(JWindow.class);
 
         // either load console or game
-        if (arguments.contains("CONSOLE")) {
-
+        if (!arguments.contains("CONSOLE")) {
+            // load game
+            DuuDuuEngine.ENGINE.initInputSystem(JInputSystem.class);
         } else {
-
+            // load console
         }
 
     }

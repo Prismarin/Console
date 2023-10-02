@@ -1,7 +1,7 @@
-package dev.duuduu.console;
+package dev.duuduu.engine;
 
-import dev.duuduu.console.backend.InputSystem;
-import dev.duuduu.console.backend.Window;
+import dev.duuduu.engine.backend.InputSystem;
+import dev.duuduu.engine.backend.Window;
 
 import javax.swing.*;
 import java.awt.*;

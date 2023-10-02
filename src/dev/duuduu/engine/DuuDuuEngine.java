@@ -1,7 +1,7 @@
-package dev.duuduu.console;
+package dev.duuduu.engine;
 
-import dev.duuduu.console.backend.InputSystem;
-import dev.duuduu.console.backend.Window;
+import dev.duuduu.engine.backend.InputSystem;
+import dev.duuduu.engine.backend.Window;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -89,7 +89,7 @@ public enum DuuDuuEngine {
         inputSystem = window.inputSystem;
     }
 
-    public final boolean isKeyPressed(int... keys) {
+    public final boolean IS_KEY_PRESSED(int... keys) {
         return inputSystem.isKeyPressed(keys);
     }
 

@@ -1,4 +1,4 @@
-package dev.duuduu.console;
+package dev.duuduu.engine;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

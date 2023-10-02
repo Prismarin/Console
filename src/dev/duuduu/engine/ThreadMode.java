@@ -1,4 +1,4 @@
-package dev.duuduu.console;
+package dev.duuduu.engine;
 
 public enum ThreadMode {
 

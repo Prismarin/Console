@@ -1,4 +1,4 @@
-package dev.duuduu.console.backend;
+package dev.duuduu.engine.backend;
 
 public abstract class InputSystem {
 

@@ -1,6 +1,6 @@
-package dev.duuduu.console;
+package dev.duuduu.engine;
 
-import dev.duuduu.console.backend.InputSystem;
+import dev.duuduu.engine.backend.InputSystem;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
