@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="">
+      <change afterPath="K:/Console/src/dev/duuduu/engine/backend/Scene.java" afterDir="false" />
       <change beforePath="K:/Console/.idea/workspace.xml" beforeDir="false" afterPath="K:/Console/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/JInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JInputSystem.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/JWindow.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +18,8 @@
       <list>
         <option value="Enum" />
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
