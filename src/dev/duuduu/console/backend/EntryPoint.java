@@ -1,8 +1,10 @@
 package dev.duuduu.console.backend;
 
 import dev.duuduu.console.DuuDuuEngine;
+import dev.duuduu.console.JWindow;
 import dev.duuduu.console.ThreadMode;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -12,7 +14,8 @@ public class EntryPoint {
      *
      * @param args DEBUG CONSOLE --RESOLUTION [WIDTH = 1280] [HEIGHT = 720] --TPS [TPS = 60] --THREADS [MODE = multi]
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)
+            throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         System.out.println("Gathering starting info...");
         ArrayList<String> arguments = new ArrayList<>(Arrays.asList(args));
 
@@ -37,6 +40,7 @@ public class EntryPoint {
         }
 
         // load engine here...
+        DuuDuuEngine.ENGINE.initWindow(JWindow.class);
 
         // either load console or game
         if (arguments.contains("CONSOLE")) {

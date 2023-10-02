@@ -1,5 +1,10 @@
 package dev.duuduu.console;
 
+import dev.duuduu.console.backend.Window;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 public enum DuuDuuEngine {
 
     ENGINE;
@@ -54,5 +59,15 @@ public enum DuuDuuEngine {
     public ThreadMode THREAD_MODE;
 
     // - WINDOW --------------------------------------------------------------------------------------------------------
+
+    private Window window;
+
+    public final <T extends Window> void initWindow(Class<T> windowClazz)
+            throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        if (window != null) return;
+        Constructor<T> constructor = windowClazz.getConstructor();
+        window = constructor.newInstance();
+        window.init("Test");
+    }
 
 }

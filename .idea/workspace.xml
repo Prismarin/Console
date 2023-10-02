@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="">
-      <change afterPath="K:/Console/src/dev/duuduu/console/EngineStart.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/console/ThreadMode.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/console/backend/Window.java" afterDir="false" />
       <change beforePath="K:/Console/.idea/workspace.xml" beforeDir="false" afterPath="K:/Console/.idea/workspace.xml" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/console/DuuDuuEngine.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/DuuDuuEngine.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/console/backend/EntryPoint.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/backend/EntryPoint.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/console/backend/Window.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/backend/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,21 +30,41 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2WATtTHnC1UdTqllkSG2pD6wFAw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="EntryPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.duuduu.console.backend.EntryPoint" />
+      <module name="Console" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.duuduu.console.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EntryPoint" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
