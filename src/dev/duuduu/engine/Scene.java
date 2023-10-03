@@ -38,4 +38,8 @@ public abstract class Scene {
         return name;
     }
 
+    public boolean isRegistered() {
+        return registered;
+    }
+
 }

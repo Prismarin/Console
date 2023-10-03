@@ -1,6 +1,7 @@
 package dev.duuduu.engine;
 
 import dev.duuduu.engine.backend.InputSystem;
+import dev.duuduu.engine.backend.SceneManager;
 import dev.duuduu.engine.backend.Window;
 
 import java.lang.reflect.Constructor;
@@ -85,6 +86,7 @@ public enum DuuDuuEngine {
 
     public final <T extends InputSystem> void initInputSystem(Class<T> inputSystemClazz)
             throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        if (inputSystem != null) return;
         window.setInputSystem(inputSystemClazz);
         inputSystem = window.inputSystem;
     }
@@ -95,6 +97,22 @@ public enum DuuDuuEngine {
 
     // - Scene ---------------------------------------------------------------------------------------------------------
 
+    private SceneManager sceneManager;
 
+    public final void initSceneManager() {
+        sceneManager = new SceneManager();
+    }
+
+    public final void QUEUE_SCENE(Scene scene) {
+        sceneManager.queueUnregisteredScene(scene);
+    }
+
+    public final void REGISTER_SCENE(Scene scene) {
+        sceneManager.registerScene(scene);
+    }
+
+    public final void QUEUE_SCENE(String name) {
+        sceneManager.queueScene(name);
+    }
 
 }

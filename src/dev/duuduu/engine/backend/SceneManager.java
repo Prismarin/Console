@@ -31,11 +31,21 @@ public final class SceneManager {
     }
 
     public void tick(float delta) {
+        // switching scene
+        if (nextScene != null) {
+            currentScene.onSceneLeft();
+            currentScene = nextScene;
+            if (!currentScene.isRegistered()) currentScene.register();
+            currentScene.onSceneEntered();
+            nextScene = null;
+        }
 
+        // ticking scene
+        if (currentScene != null) currentScene.tick(delta);
     }
 
     public void render(Renderer renderer) {
-
+        if (currentScene != null) currentScene.render(renderer);
     }
 
 }
