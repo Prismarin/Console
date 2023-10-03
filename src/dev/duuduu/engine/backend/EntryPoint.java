@@ -2,7 +2,6 @@ package dev.duuduu.engine.backend;
 
 import dev.duuduu.console.ConsoleJInputSystem;
 import dev.duuduu.engine.DuuDuuEngine;
-import dev.duuduu.engine.ThreadMode;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -16,6 +15,7 @@ public class EntryPoint {
      */
     public static void main(String[] args)
             throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        long start = System.nanoTime();
         System.out.println("Gathering starting info...");
         ArrayList<String> arguments = new ArrayList<>(Arrays.asList(args));
 
@@ -37,12 +37,19 @@ public class EntryPoint {
             final int threadModeIndex = arguments.indexOf("--THREADS");
             final String threadMode = arguments.get(threadModeIndex + 1);
             DuuDuuEngine.ENGINE.THREAD_MODE = ThreadMode.fromString(threadMode);
+        } else {
+            DuuDuuEngine.ENGINE.THREAD_MODE = ThreadMode.SINGLE;
         }
 
         boolean jdkGraphics = arguments.contains("--LEGACY");
+        jdkGraphics = true;
 
         // load engine here...
+        System.out.println("Starting " + DuuDuuEngine.VERSION + "...");
+
         DuuDuuEngine.ENGINE.initWindow(JWindow.class);
+        DuuDuuEngine.ENGINE.initSceneManager();
+        DuuDuuEngine.ENGINE.initGameLoop();
 
         // either load console or game
         if (!arguments.contains("CONSOLE")) {
@@ -52,6 +59,9 @@ public class EntryPoint {
             // load console
             DuuDuuEngine.ENGINE.initInputSystem(ConsoleJInputSystem.class);
         }
+
+        DuuDuuEngine.ENGINE.startGameLoop();
+        System.out.println("DuuDuuEngine started! " + (System.nanoTime() - start) + "ns have passed.");
 
     }
 

@@ -1,22 +1,22 @@
 package dev.duuduu.engine.backend;
 
 import dev.duuduu.engine.DuuDuuEngine;
-import dev.duuduu.engine.Scene;
+import dev.duuduu.engine.RawScene;
 
 import java.util.HashMap;
 
 public final class SceneManager {
 
-    private Scene currentScene, nextScene;
-    private final HashMap<String, Scene> registeredScenes;
+    private RawScene currentScene, nextScene;
+    private final HashMap<String, RawScene> registeredScenes;
 
     public SceneManager() {
         registeredScenes = new HashMap<>();
     }
 
-    public void registerScene(Scene scene) {
+    public void registerScene(RawScene scene) {
         if (!registeredScenes.containsValue(scene)) {
-            Scene put = registeredScenes.putIfAbsent(scene.getName(), scene);
+            RawScene put = registeredScenes.putIfAbsent(scene.getName(), scene);
             if (put != null && DuuDuuEngine.ENGINE.DEBUG()) throw new RuntimeException("Debug Exception: Double name! Get fucked lol!");
             scene.register();
         }
@@ -26,7 +26,7 @@ public final class SceneManager {
         nextScene = registeredScenes.get(name);
     }
 
-    public void queueUnregisteredScene(Scene scene) {
+    public void queueUnregisteredScene(RawScene scene) {
         nextScene = scene;
     }
 
@@ -46,6 +46,11 @@ public final class SceneManager {
 
     public void render(Renderer renderer) {
         if (currentScene != null) currentScene.render(renderer);
+    }
+
+    public Renderer getRenderer() {
+        if (currentScene != null) return currentScene.getRenderer();
+        return null;
     }
 
 }

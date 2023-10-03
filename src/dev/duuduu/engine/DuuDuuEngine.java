@@ -1,8 +1,6 @@
 package dev.duuduu.engine;
 
-import dev.duuduu.engine.backend.InputSystem;
-import dev.duuduu.engine.backend.SceneManager;
-import dev.duuduu.engine.backend.Window;
+import dev.duuduu.engine.backend.*;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -10,6 +8,8 @@ import java.lang.reflect.InvocationTargetException;
 public enum DuuDuuEngine {
 
     ENGINE;
+
+    public static final String VERSION = "DuuDuuEngine pre alpha 2.0.0";
 
     DuuDuuEngine() {
         debugInitialized = false;
@@ -69,7 +69,7 @@ public enum DuuDuuEngine {
         if (window != null) return;
         Constructor<T> constructor = windowClazz.getConstructor();
         window = constructor.newInstance();
-        window.init("Test");
+        window.init("DuuDuuEngine 2");
     }
 
     public final int WINDOW_WIDTH() {
@@ -95,7 +95,7 @@ public enum DuuDuuEngine {
         return inputSystem.isKeyPressed(keys);
     }
 
-    // - Scene ---------------------------------------------------------------------------------------------------------
+    // - SCENE ---------------------------------------------------------------------------------------------------------
 
     private SceneManager sceneManager;
 
@@ -103,16 +103,28 @@ public enum DuuDuuEngine {
         sceneManager = new SceneManager();
     }
 
-    public final void QUEUE_SCENE(Scene scene) {
+    public final void QUEUE_SCENE(RawScene scene) {
         sceneManager.queueUnregisteredScene(scene);
     }
 
-    public final void REGISTER_SCENE(Scene scene) {
+    public final void REGISTER_SCENE(RawScene scene) {
         sceneManager.registerScene(scene);
     }
 
     public final void QUEUE_SCENE(String name) {
         sceneManager.queueScene(name);
+    }
+
+    // - GAMELOOP ------------------------------------------------------------------------------------------------------
+
+    private GameLoop gameLoop;
+
+    public final void initGameLoop() {
+        this.gameLoop = new GameLoop(sceneManager);
+    }
+
+    public final void startGameLoop() {
+        this.gameLoop.start();
     }
 
 }
