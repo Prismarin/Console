@@ -104,6 +104,7 @@ public enum DuuDuuEngine {
     private SceneManager sceneManager;
 
     public final void initSceneManager() {
+        if (sceneManager != null) return;
         System.out.println("Init SceneManager...");
         sceneManager = new SceneManager();
         System.out.println("SceneManager ready");
@@ -126,6 +127,7 @@ public enum DuuDuuEngine {
     private GameLoop gameLoop;
 
     public final void initGameLoop() {
+        if (gameLoop != null) return;
         System.out.println("Init GameLoop...");
         this.gameLoop = new GameLoop(sceneManager);
         System.out.println("GameLoop is ready");

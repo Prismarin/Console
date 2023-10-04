@@ -39,7 +39,7 @@ public class EntryPoint {
             final String threadMode = arguments.get(threadModeIndex + 1);
             DuuDuuEngine.ENGINE.THREAD_MODE = ThreadMode.fromString(threadMode);
         } else {
-            DuuDuuEngine.ENGINE.THREAD_MODE = ThreadMode.SINGLE;
+            DuuDuuEngine.ENGINE.THREAD_MODE = ThreadMode.MULTI;
         }
 
         boolean jdkGraphics = arguments.contains("--LEGACY");
@@ -54,55 +54,10 @@ public class EntryPoint {
         // either load console or game
         if (!arguments.contains("CONSOLE")) {
             // load game
-            if (jdkGraphics) {
-                DuuDuuEngine.ENGINE.initInputSystem(JInputSystem.class);
-            }
-
-
-            RawScene rawScene = new RawScene("Test") {
-
-                JRenderer renderer;
-
-                @Override
-                public void onRegister() {
-                    renderer = new JRenderer();
-                }
-
-                @Override
-                public Renderer getRenderer() {
-                    return renderer;
-                }
-
-                @Override
-                public void onSceneEntered() {
-                    System.out.println("Hello");
-                }
-
-                @Override
-                public void onSceneLeft() {
-
-                }
-
-                @Override
-                public void tick(float delta) {
-
-                }
-
-                @Override
-                public void render(Renderer renderer) {
-                    renderer.fillRectangle(0x80FFFFFF, 100, 100, 100, 100);
-                    renderer.fillRectangle(0xFF0000FF, 300, 100, 100, 100);
-                }
-            };
-            DuuDuuEngine.ENGINE.REGISTER_SCENE(rawScene);
-            DuuDuuEngine.ENGINE.QUEUE_SCENE("Test");
-
-
+            DuuDuuEngine.ENGINE.initInputSystem(JInputSystem.class);
         } else {
             // load console
-            if (jdkGraphics) {
-                DuuDuuEngine.ENGINE.initInputSystem(ConsoleJInputSystem.class);
-            }
+            DuuDuuEngine.ENGINE.initInputSystem(ConsoleJInputSystem.class);
         }
 
         DuuDuuEngine.ENGINE.startGameLoop();
