@@ -80,6 +80,10 @@ public enum DuuDuuEngine {
         return window.getHeight();
     }
 
+    public Window getWindow() {
+        return window;
+    }
+
     // - INPUT ---------------------------------------------------------------------------------------------------------
 
     private InputSystem inputSystem;

@@ -5,6 +5,7 @@ import dev.duuduu.engine.DuuDuuEngine;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferStrategy;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
@@ -64,6 +65,11 @@ public class JWindow extends Window {
     @Override
     public int getHeight() {
         return canvas.getHeight();
+    }
+
+    public BufferStrategy getBufferStrategy() {
+        if (canvas.getBufferStrategy() == null) canvas.createBufferStrategy(3);
+        return canvas.getBufferStrategy();
     }
 
 }

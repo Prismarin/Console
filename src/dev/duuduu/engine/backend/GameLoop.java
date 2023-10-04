@@ -36,7 +36,10 @@ public final class GameLoop {
             long now = System.nanoTime();
             float delta = (now - lastTime) / 10E9f;
             sceneManager.tick(delta);
-            sceneManager.render(sceneManager.getRenderer());
+            Renderer renderer = sceneManager.getRenderer();
+            renderer.prepare();
+            sceneManager.render(renderer);
+            renderer.show();
             lastTime = now;
         }
     }
@@ -52,12 +55,11 @@ public final class GameLoop {
     }
 
     public void multiThreadRenderLoop() {
-        long lastTime = System.nanoTime();
         while (running) {
-            long now = System.nanoTime();
-            float delta = (now - lastTime) / 10E9f;
-            sceneManager.render(sceneManager.getRenderer());
-            lastTime = now;
+            Renderer renderer = sceneManager.getRenderer();
+            renderer.prepare();
+            sceneManager.render(renderer);
+            renderer.show();
         }
     }
 

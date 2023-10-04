@@ -2,6 +2,7 @@ package dev.duuduu.engine.backend;
 
 import dev.duuduu.console.ConsoleJInputSystem;
 import dev.duuduu.engine.DuuDuuEngine;
+import dev.duuduu.engine.RawScene;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -42,7 +43,6 @@ public class EntryPoint {
         }
 
         boolean jdkGraphics = arguments.contains("--LEGACY");
-        jdkGraphics = true;
 
         // load engine here...
         System.out.println("Starting " + DuuDuuEngine.VERSION + "...");
@@ -54,10 +54,55 @@ public class EntryPoint {
         // either load console or game
         if (!arguments.contains("CONSOLE")) {
             // load game
-            DuuDuuEngine.ENGINE.initInputSystem(JInputSystem.class);
+            if (jdkGraphics) {
+                DuuDuuEngine.ENGINE.initInputSystem(JInputSystem.class);
+            }
+
+
+            RawScene rawScene = new RawScene("Test") {
+
+                JRenderer renderer;
+
+                @Override
+                public void onRegister() {
+                    renderer = new JRenderer();
+                }
+
+                @Override
+                public Renderer getRenderer() {
+                    return renderer;
+                }
+
+                @Override
+                public void onSceneEntered() {
+                    System.out.println("Hello");
+                }
+
+                @Override
+                public void onSceneLeft() {
+
+                }
+
+                @Override
+                public void tick(float delta) {
+
+                }
+
+                @Override
+                public void render(Renderer renderer) {
+                    renderer.fillRectangle(0x80FFFFFF, 100, 100, 100, 100);
+                    renderer.fillRectangle(0xFF0000FF, 300, 100, 100, 100);
+                }
+            };
+            DuuDuuEngine.ENGINE.REGISTER_SCENE(rawScene);
+            DuuDuuEngine.ENGINE.QUEUE_SCENE("Test");
+
+
         } else {
             // load console
-            DuuDuuEngine.ENGINE.initInputSystem(ConsoleJInputSystem.class);
+            if (jdkGraphics) {
+                DuuDuuEngine.ENGINE.initInputSystem(ConsoleJInputSystem.class);
+            }
         }
 
         DuuDuuEngine.ENGINE.startGameLoop();

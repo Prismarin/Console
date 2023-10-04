@@ -33,7 +33,7 @@ public final class SceneManager {
     public void tick(float delta) {
         // switching scene
         if (nextScene != null) {
-            currentScene.onSceneLeft();
+            if (currentScene != null) currentScene.onSceneLeft();
             currentScene = nextScene;
             if (!currentScene.isRegistered()) currentScene.register();
             currentScene.onSceneEntered();
@@ -50,7 +50,32 @@ public final class SceneManager {
 
     public Renderer getRenderer() {
         if (currentScene != null) return currentScene.getRenderer();
-        return null;
+        return new Renderer() {
+            @Override
+            public void prepare() {
+
+            }
+
+            @Override
+            public boolean isCompatibleToWindow() {
+                return false;
+            }
+
+            @Override
+            public void drawRectangle(int hexColor, int x, int y, int width, int height) {
+
+            }
+
+            @Override
+            public void fillRectangle(int hexColor, int x, int y, int width, int height) {
+
+            }
+
+            @Override
+            public void show() {
+
+            }
+        };
     }
 
 }
