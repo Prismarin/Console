@@ -100,7 +100,9 @@ public enum DuuDuuEngine {
     private SceneManager sceneManager;
 
     public final void initSceneManager() {
+        System.out.println("Init SceneManager...");
         sceneManager = new SceneManager();
+        System.out.println("SceneManager ready");
     }
 
     public final void QUEUE_SCENE(RawScene scene) {
@@ -120,7 +122,9 @@ public enum DuuDuuEngine {
     private GameLoop gameLoop;
 
     public final void initGameLoop() {
+        System.out.println("Init GameLoop...");
         this.gameLoop = new GameLoop(sceneManager);
+        System.out.println("GameLoop is ready");
     }
 
     public final void startGameLoop() {

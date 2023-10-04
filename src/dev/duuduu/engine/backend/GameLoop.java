@@ -14,16 +14,19 @@ public final class GameLoop {
 
     public void start() {
         if (running) return;
+        System.out.println("Starting Gameloop...");
         running = true;
 
         if (DuuDuuEngine.ENGINE.THREAD_MODE == ThreadMode.SINGLE) {
             Thread gameThread = new Thread(this::singleThreadLoop);
             gameThread.start();
+            System.out.println("Started GameLoop on single thread");
         } else {
             Thread tickingThread = new Thread(this::multiThreadTickLoop);
             Thread renderThread = new Thread(this::multiThreadRenderLoop);
             tickingThread.start();
             renderThread.start();
+            System.out.println("Started GameLoop on two threads");
         }
     }
 
@@ -39,11 +42,23 @@ public final class GameLoop {
     }
 
     public void multiThreadTickLoop() {
-
+        long lastTime = System.nanoTime();
+        while (running) {
+            long now = System.nanoTime();
+            float delta = (now - lastTime) / 10E9f;
+            sceneManager.tick(delta);
+            lastTime = now;
+        }
     }
 
     public void multiThreadRenderLoop() {
-
+        long lastTime = System.nanoTime();
+        while (running) {
+            long now = System.nanoTime();
+            float delta = (now - lastTime) / 10E9f;
+            sceneManager.render(sceneManager.getRenderer());
+            lastTime = now;
+        }
     }
 
 }

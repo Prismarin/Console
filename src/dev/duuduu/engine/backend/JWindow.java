@@ -1,8 +1,6 @@
 package dev.duuduu.engine.backend;
 
 import dev.duuduu.engine.DuuDuuEngine;
-import dev.duuduu.engine.backend.InputSystem;
-import dev.duuduu.engine.backend.Window;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,6 +15,7 @@ public class JWindow extends Window {
 
     @Override
     public void init(String... args) {
+        System.out.println("Init a JWindow");
         frame = new JFrame();
         frame.setTitle(args[0]);
         frame.setResizable(false);
@@ -29,28 +28,27 @@ public class JWindow extends Window {
             frame.setAlwaysOnTop(true);
             canvas.setPreferredSize(tk.getScreenSize());
         } else {
+            System.out.println("Setting window's size to resolution size");
             canvas.setPreferredSize(new Dimension(DuuDuuEngine.ENGINE.RESOLUTION_WIDTH(), DuuDuuEngine.ENGINE.RESOLUTION_HEIGHT()));
         }
         frame.add(canvas);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        System.out.println("Window visible");
     }
 
     @Override
     public <T extends InputSystem> void setInputSystem(Class<T> inputSystemClazz)
             throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        if (inputSystem == null) return;
+        if (inputSystem != null) return;
+        System.out.println("Setting InputSystem...");
         Constructor<T> constructor = inputSystemClazz.getConstructor();
         inputSystem = constructor.newInstance();
-        if (!(inputSystem instanceof KeyListener)) throw new RuntimeException("Wrong Input System for this Window");
+        if (!(inputSystem instanceof KeyListener)) throw new RuntimeException("Incompatible InputSystem for JWindow");
         inputSystem.init();
         frame.addKeyListener((KeyListener) inputSystem);
-    }
-
-    @Override
-    public void startLoop() {
-
+        System.out.println("InputSystem active");
     }
 
     @Override

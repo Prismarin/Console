@@ -11,8 +11,6 @@ public abstract class Window {
     public abstract <T extends InputSystem> void setInputSystem(Class<T> inputSystemClazz)
             throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException;
 
-    public abstract void startLoop();
-
     public abstract void loop();
 
     public abstract int getWidth();
