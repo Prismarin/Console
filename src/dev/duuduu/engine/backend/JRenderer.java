@@ -50,8 +50,8 @@ public class JRenderer extends Renderer {
         g.dispose();
 
         Graphics screenG = bs.getDrawGraphics();
-        screenG.clearRect(0, 0, DuuDuuEngine.ENGINE.RESOLUTION_WIDTH(), DuuDuuEngine.ENGINE.RESOLUTION_HEIGHT());
-        screenG.drawImage(canvas, 0, 0, DuuDuuEngine.ENGINE.RESOLUTION_WIDTH(), DuuDuuEngine.ENGINE.RESOLUTION_HEIGHT(), null);
+        screenG.clearRect(0, 0, DuuDuuEngine.ENGINE.WINDOW_WIDTH(), DuuDuuEngine.ENGINE.WINDOW_HEIGHT());
+        screenG.drawImage(canvas, 0, 0, DuuDuuEngine.ENGINE.WINDOW_WIDTH(), DuuDuuEngine.ENGINE.WINDOW_HEIGHT(), null);
         screenG.dispose();
         bs.show();
     }

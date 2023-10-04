@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Console:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="">
-      <change afterPath="K:/Console/src/dev/duuduu/engine/backend/JRenderer.java" afterDir="false" />
+      <change afterPath="K:/Console/.idea/artifacts/Console_jar.xml" afterDir="false" />
+      <change afterPath="K:/Console/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="K:/Console/.idea/workspace.xml" beforeDir="false" afterPath="K:/Console/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/Renderer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/Renderer.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/SceneManager.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/SceneManager.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/JRenderer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JRenderer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +46,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="EntryPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.duuduu.engine.backend.EntryPoint" />

@@ -34,7 +34,7 @@ public final class GameLoop {
         long lastTime = System.nanoTime();
         while (running) {
             long now = System.nanoTime();
-            float delta = (now - lastTime) / 10E9f;
+            float delta = (now - lastTime) / 1E9f;
             sceneManager.tick(delta);
             Renderer renderer = sceneManager.getRenderer();
             renderer.prepare();
