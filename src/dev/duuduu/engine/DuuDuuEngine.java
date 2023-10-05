@@ -60,6 +60,17 @@ public enum DuuDuuEngine {
     @EngineStart
     public ThreadMode THREAD_MODE;
 
+    // - GAME_LOADER ---------------------------------------------------------------------------------------------------
+
+    private Game game;
+
+    public final void loadGame() {
+        GameLoader gameLoader = new GameLoader();
+        game = gameLoader.loadGame();
+        game.load();
+        WINDOW_TITLE(game.windowTitle);
+    }
+
     // - WINDOW --------------------------------------------------------------------------------------------------------
 
     private Window window;
@@ -78,6 +89,14 @@ public enum DuuDuuEngine {
 
     public final int WINDOW_HEIGHT() {
         return window.getHeight();
+    }
+
+    public final void WINDOW_TITLE(String title) {
+        window.setTitle(title);
+    }
+
+    public final String WINDOW_TITLE() {
+        return window.getTitle();
     }
 
     public Window getWindow() {
@@ -108,6 +127,10 @@ public enum DuuDuuEngine {
         System.out.println("Init SceneManager...");
         sceneManager = new SceneManager();
         System.out.println("SceneManager ready");
+    }
+
+    public final void loadFirstScene() {
+        QUEUE_SCENE(game.getFirstScene());
     }
 
     public final void QUEUE_SCENE(RawScene scene) {

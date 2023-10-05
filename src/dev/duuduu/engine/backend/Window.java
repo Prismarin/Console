@@ -17,4 +17,8 @@ public abstract class Window {
 
     public abstract int getHeight();
 
+    public abstract void setTitle(String title);
+
+    public abstract String getTitle();
+
 }

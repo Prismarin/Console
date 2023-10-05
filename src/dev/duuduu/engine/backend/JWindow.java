@@ -67,6 +67,16 @@ public class JWindow extends Window {
         return canvas.getHeight();
     }
 
+    @Override
+    public String getTitle() {
+        return frame.getTitle();
+    }
+
+    @Override
+    public void setTitle(String title) {
+        frame.setTitle(title);
+    }
+
     public BufferStrategy getBufferStrategy() {
         if (canvas.getBufferStrategy() == null) canvas.createBufferStrategy(3);
         return canvas.getBufferStrategy();
