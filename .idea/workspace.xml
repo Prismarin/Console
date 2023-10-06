@@ -12,10 +12,8 @@
     <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="">
       <change beforePath="K:/Console/.idea/workspace.xml" beforeDir="false" afterPath="K:/Console/.idea/workspace.xml" afterDir="false" />
       <change beforePath="K:/Console/Console.iml" beforeDir="false" afterPath="K:/Console/Console.iml" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/Window.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/Window.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/SceneManager.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/SceneManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +58,18 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "K:/Console",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="K:\Console" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="EntryPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.duuduu.engine.backend.EntryPoint" />

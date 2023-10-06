@@ -2,6 +2,7 @@ package dev.duuduu.engine.backend;
 
 import dev.duuduu.engine.DuuDuuEngine;
 import dev.duuduu.engine.RawScene;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 
@@ -45,37 +46,16 @@ public final class SceneManager {
     }
 
     public void render(Renderer renderer) {
-        if (currentScene != null) currentScene.render(renderer);
+        if (currentScene != null && renderer != null) {
+            renderer.prepare();
+            currentScene.render(renderer);
+            renderer.show();
+        }
     }
 
-    public Renderer getRenderer() {
+    public @Nullable Renderer getRenderer() {
         if (currentScene != null) return currentScene.getRenderer();
-        return new Renderer() {
-            @Override
-            public void prepare() {
-
-            }
-
-            @Override
-            public boolean isCompatibleToWindow() {
-                return false;
-            }
-
-            @Override
-            public void drawRectangle(int hexColor, int x, int y, int width, int height) {
-
-            }
-
-            @Override
-            public void fillRectangle(int hexColor, int x, int y, int width, int height) {
-
-            }
-
-            @Override
-            public void show() {
-
-            }
-        };
+        return null;
     }
 
 }
