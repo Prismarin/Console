@@ -24,6 +24,7 @@ public class JWindow extends Window {
         canvas = new Canvas();
         canvas.setFocusable(false);
         Toolkit tk = Toolkit.getDefaultToolkit();
+        System.out.printf("Display size: %d,%d\n", tk.getScreenSize().width, tk.getScreenSize().height);
         if (!DuuDuuEngine.ENGINE.DEBUG()) {
             frame.setUndecorated(true);
             frame.setAlwaysOnTop(true);

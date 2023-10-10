@@ -61,7 +61,6 @@ public enum DuuDuuEngine {
     public ThreadMode THREAD_MODE;
 
     // - GAME_LOADER ---------------------------------------------------------------------------------------------------
-
     private Game game;
 
     public final void loadGame() {
@@ -72,7 +71,6 @@ public enum DuuDuuEngine {
     }
 
     // - WINDOW --------------------------------------------------------------------------------------------------------
-
     private Window window;
 
     public final <T extends Window> void initWindow(Class<T> windowClazz)
@@ -104,7 +102,6 @@ public enum DuuDuuEngine {
     }
 
     // - INPUT ---------------------------------------------------------------------------------------------------------
-
     private InputSystem inputSystem;
 
     public final <T extends InputSystem> void initInputSystem(Class<T> inputSystemClazz)
@@ -119,7 +116,6 @@ public enum DuuDuuEngine {
     }
 
     // - SCENE ---------------------------------------------------------------------------------------------------------
-
     private SceneManager sceneManager;
 
     public final void initSceneManager() {
@@ -146,7 +142,6 @@ public enum DuuDuuEngine {
     }
 
     // - GAMELOOP ------------------------------------------------------------------------------------------------------
-
     private GameLoop gameLoop;
 
     public final void initGameLoop() {

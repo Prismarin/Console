@@ -38,6 +38,7 @@ public final class GameLoop {
         while (running) {
             long now = System.nanoTime();
             float delta = (now - lastTime) / 1E9f;
+            fps = (int) (1 / delta);
             sceneManager.tick(delta);
             Renderer renderer = sceneManager.getRenderer();
             sceneManager.render(renderer);
@@ -67,12 +68,15 @@ public final class GameLoop {
             fps += 1;
             counter += (now - lastTime);
             if (counter >= secInNano) {
-                System.out.printf("FPS: %d \n", fps);
                 fps = 0;
                 counter -= secInNano;
             }
             lastTime = now;
         }
+    }
+
+    public int getFps() {
+        return fps;
     }
 
 }

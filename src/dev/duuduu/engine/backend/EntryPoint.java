@@ -64,7 +64,7 @@ public class EntryPoint {
 
         DuuDuuEngine.ENGINE.loadFirstScene();
         DuuDuuEngine.ENGINE.startGameLoop();
-        System.out.printf("DuuDuuEngine started! %.0fms have passed.%n", ((System.nanoTime() - start) * 1E-6));
+        System.out.printf("DuuDuuEngine started! %.0fms have passed.\n", ((System.nanoTime() - start) * 1E-6));
     }
 
 }
