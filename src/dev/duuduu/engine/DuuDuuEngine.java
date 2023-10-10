@@ -155,4 +155,17 @@ public enum DuuDuuEngine {
         this.gameLoop.start();
     }
 
+    public final void exit() {
+        this.gameLoop.stop();
+    }
+
+    // - ResourceLoader ------------------------------------------------------------------------------------------------
+    private ResourceLoader resourceLoader;
+
+    public final void initResourceLoader(Class<Game> gameClass) {
+        if (resourceLoader != null) return;
+        resourceLoader = new ResourceLoader(gameClass);
+        System.out.println("ResourceLoader ready!");
+    }
+
 }

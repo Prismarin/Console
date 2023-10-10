@@ -34,49 +34,65 @@ public final class GameLoop {
     }
 
     public void singleThreadLoop() {
-        long lastTime = System.nanoTime();
-        while (running) {
-            long now = System.nanoTime();
-            float delta = (now - lastTime) / 1E9f;
-            fps = (int) (1 / delta);
-            sceneManager.tick(delta);
-            Renderer renderer = sceneManager.getRenderer();
-            sceneManager.render(renderer);
-            lastTime = now;
+        try {
+            long lastTime = System.nanoTime();
+            while (running) {
+                long now = System.nanoTime();
+                float delta = (now - lastTime) / 1E9f;
+                fps = (int) (1 / delta);
+                sceneManager.tick(delta);
+                Renderer renderer = sceneManager.getRenderer();
+                sceneManager.render(renderer);
+                lastTime = now;
+            }
+        } catch (Exception e) {
+            if (DuuDuuEngine.ENGINE.DEBUG()) throw new RuntimeException(e);
         }
     }
 
     public void multiThreadTickLoop() {
-        long lastTime = System.nanoTime();
-        while (running) {
-            long now = System.nanoTime();
-            float delta = (now - lastTime) / 10E9f;
-            sceneManager.tick(delta);
-            lastTime = now;
+        try {
+            long lastTime = System.nanoTime();
+            while (running) {
+                long now = System.nanoTime();
+                float delta = (now - lastTime) / 10E9f;
+                sceneManager.tick(delta);
+                lastTime = now;
+            }
+        } catch (Exception e) {
+            if (DuuDuuEngine.ENGINE.DEBUG()) throw new RuntimeException(e);
         }
     }
 
     public void multiThreadRenderLoop() {
-        final long secInNano = 1000000000;
-        long counter = 0;
-        long lastTime = System.nanoTime();
-        long now = 0;
-        while (running) {
-            now = System.nanoTime();
-            Renderer renderer = sceneManager.getRenderer();
-            sceneManager.render(renderer);
-            fps += 1;
-            counter += (now - lastTime);
-            if (counter >= secInNano) {
-                fps = 0;
-                counter -= secInNano;
+        try {
+            final long secInNano = 1000000000;
+            long counter = 0;
+            long lastTime = System.nanoTime();
+            long now = 0;
+            while (running) {
+                now = System.nanoTime();
+                Renderer renderer = sceneManager.getRenderer();
+                sceneManager.render(renderer);
+                fps += 1;
+                counter += (now - lastTime);
+                if (counter >= secInNano) {
+                    fps = 0;
+                    counter -= secInNano;
+                }
+                lastTime = now;
             }
-            lastTime = now;
+        } catch (Exception e) {
+            if (DuuDuuEngine.ENGINE.DEBUG()) throw new RuntimeException(e);
         }
     }
 
     public int getFps() {
         return fps;
+    }
+
+    public void stop() {
+        running = false;
     }
 
 }

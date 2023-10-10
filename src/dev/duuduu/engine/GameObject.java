@@ -8,15 +8,18 @@ import java.util.ArrayList;
 
 public final class GameObject extends RawGameobject {
 
+    private boolean queuedToRemove;
     private String name;
     private Script script;
     private final ArrayList<GameObject> children;
     private GameObject parent;
+    private boolean running;
 
     public GameObject(GameObject parent, String name) {
         this.name = name;
         this.parent = parent;
         children = new ArrayList<>();
+        running = false;
     }
 
     public void setParent(GameObject gameObject) {
@@ -29,6 +32,10 @@ public final class GameObject extends RawGameobject {
 
     public void start() {
         if (script != null) script.start();
+        for (int i = 0, len = children.size(); i < len; i ++) {
+            children.get(i).start();
+        }
+        running = true;
     }
 
     @Override
@@ -37,18 +44,26 @@ public final class GameObject extends RawGameobject {
         for (int i = 0, len = children.size(); i < len; i ++) {
             children.get(i).tick(delta);
         }
+        GameObject gameObject;
+        for (int i = 0; i < children.size(); i ++) {
+            gameObject = children.get(i);
+            if (gameObject.queuedToRemove) {
+                children.remove(i);
+                i --;
+            }
+        }
     }
 
     @Override
     public void render(Renderer renderer) {
         if (script != null) script.render(renderer);
-        for (int i = 0, len = children.size(); i < len; i ++) {
+        for (int i = 0; i < children.size(); i ++) {
             children.get(i).render(renderer);
         }
     }
 
     public void addChild(@NotNull GameObject gameObject) {
-        gameObject.start();
+        if (running) gameObject.start();
         children.add(gameObject);
     }
 
@@ -71,6 +86,20 @@ public final class GameObject extends RawGameobject {
 
     public ArrayList<GameObject> getChildren() {
         return (ArrayList<GameObject>) children.clone();
+    }
+
+    public void removeChild(int index) {
+        children.get(index).queuedToRemove = true;
+    }
+
+    public void removeChild(String name) {
+        GameObject child = getChild(name);
+        if (child != null) child.queuedToRemove = true;
+    }
+
+    public void queueFree() {
+        queuedToRemove = true;
+        if (parent == null) DuuDuuEngine.ENGINE.exit();
     }
 
     public boolean setName(String name) {

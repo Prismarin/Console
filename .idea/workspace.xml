@@ -12,10 +12,8 @@
     <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="">
       <change beforePath="K:/Console/.idea/workspace.xml" beforeDir="false" afterPath="K:/Console/.idea/workspace.xml" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/RawGameobject.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/RawGameobject.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/GameObject.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/GameObject.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
