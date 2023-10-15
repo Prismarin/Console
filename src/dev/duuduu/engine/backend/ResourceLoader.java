@@ -10,15 +10,18 @@ import java.io.InputStream;
 
 public class ResourceLoader {
 
-    private final Class<Game> clazz;
+    private final Class<? extends Game> clazz;
 
-    public ResourceLoader(Class<Game> clazz) {
+    public ResourceLoader(Class<? extends Game> clazz) {
         this.clazz = clazz;
     }
 
     public Texture loadTexture(String path) {
-        try (InputStream in = clazz.getResourceAsStream(path)) {
+        try {
+            InputStream in = clazz.getResourceAsStream(path);
+            assert in != null;
             BufferedImage img = ImageIO.read(in);
+            in.close();
             return new Texture(path, img);
         } catch (IOException e) {
             throw new RuntimeException(e);

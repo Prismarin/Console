@@ -41,6 +41,7 @@ public final class GameObject extends RawGameobject {
     @Override
     public void tick(float delta) {
         if (script != null) script.tick(delta);
+        if (children.isEmpty()) return;
         for (int i = 0, len = children.size(); i < len; i ++) {
             children.get(i).tick(delta);
         }
@@ -65,6 +66,7 @@ public final class GameObject extends RawGameobject {
     public void addChild(@NotNull GameObject gameObject) {
         if (running) gameObject.start();
         children.add(gameObject);
+        if (gameObject.parent != this) gameObject.setParent(this);
     }
 
     public int getChildCount() {
@@ -99,7 +101,7 @@ public final class GameObject extends RawGameobject {
 
     public void queueFree() {
         queuedToRemove = true;
-        if (parent == null) DuuDuuEngine.ENGINE.exit();
+        if (parent == null) DuuDuuEngine.ENGINE.EXIT();
     }
 
     public boolean setName(String name) {
@@ -124,6 +126,10 @@ public final class GameObject extends RawGameobject {
     @Override
     public boolean isRaw() {
         return false;
+    }
+
+    public GameObject getRoot() {
+        return DuuDuuEngine.ENGINE.getRoot();
     }
 
 }

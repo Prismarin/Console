@@ -44,4 +44,8 @@ public class Scene extends RawScene {
         root.render(renderer);
     }
 
+    public GameObject getRoot() {
+        return root;
+    }
+
 }

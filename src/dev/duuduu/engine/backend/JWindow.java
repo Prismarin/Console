@@ -50,6 +50,7 @@ public class JWindow extends Window {
         if (!(inputSystem instanceof KeyListener)) throw new RuntimeException("Incompatible InputSystem for JWindow");
         inputSystem.init();
         frame.addKeyListener((KeyListener) inputSystem);
+        canvas.addKeyListener((KeyListener) inputSystem);
         System.out.println("InputSystem active");
     }
 

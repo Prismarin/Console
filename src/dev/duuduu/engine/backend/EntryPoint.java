@@ -55,8 +55,9 @@ public class EntryPoint {
         if (!arguments.contains("CONSOLE")) {
             // load game
             DuuDuuEngine.ENGINE.initInputSystem(JInputSystem.class);
+            DuuDuuEngine.ENGINE.initGame();
+            DuuDuuEngine.ENGINE.initResourceLoader();
             DuuDuuEngine.ENGINE.loadGame();
-
         } else {
             // load console
             DuuDuuEngine.ENGINE.initInputSystem(ConsoleJInputSystem.class);

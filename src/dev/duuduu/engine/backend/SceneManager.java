@@ -1,7 +1,9 @@
 package dev.duuduu.engine.backend;
 
 import dev.duuduu.engine.DuuDuuEngine;
+import dev.duuduu.engine.GameObject;
 import dev.duuduu.engine.RawScene;
+import dev.duuduu.engine.Scene;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
@@ -55,6 +57,13 @@ public final class SceneManager {
 
     public @Nullable Renderer getRenderer() {
         if (currentScene != null) return currentScene.getRenderer();
+        return null;
+    }
+
+    public GameObject getRoot() {
+        if (currentScene instanceof Scene) {
+            return ((Scene) currentScene).getRoot();
+        }
         return null;
     }
 

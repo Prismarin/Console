@@ -1,6 +1,7 @@
 package dev.duuduu.engine;
 
 import dev.duuduu.engine.backend.*;
+import dev.duuduu.resources.Texture;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -62,16 +63,22 @@ public enum DuuDuuEngine {
 
     // - GAME_LOADER ---------------------------------------------------------------------------------------------------
     private Game game;
+    @NotGarbage
+    private GameLoader gameLoader;
+
+    public final void initGame() {
+        gameLoader = new GameLoader();
+        game = gameLoader.loadGame();
+    }
 
     public final void loadGame() {
-        GameLoader gameLoader = new GameLoader();
-        game = gameLoader.loadGame();
         game.load();
         WINDOW_TITLE(game.windowTitle);
     }
 
     // - WINDOW --------------------------------------------------------------------------------------------------------
     private Window window;
+    private boolean legacy;
 
     public final <T extends Window> void initWindow(Class<T> windowClazz)
             throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
@@ -79,6 +86,7 @@ public enum DuuDuuEngine {
         Constructor<T> constructor = windowClazz.getConstructor();
         window = constructor.newInstance();
         window.init("DuuDuuEngine 2");
+        if (window instanceof JWindow) legacy = true;
     }
 
     public final int WINDOW_WIDTH() {
@@ -95,6 +103,10 @@ public enum DuuDuuEngine {
 
     public final String WINDOW_TITLE() {
         return window.getTitle();
+    }
+
+    public final boolean IS_LEGACY() {
+        return legacy;
     }
 
     public Window getWindow() {
@@ -141,6 +153,10 @@ public enum DuuDuuEngine {
         sceneManager.queueScene(name);
     }
 
+    public final GameObject getRoot() {
+        return sceneManager.getRoot();
+    }
+
     // - GAMELOOP ------------------------------------------------------------------------------------------------------
     private GameLoop gameLoop;
 
@@ -155,17 +171,21 @@ public enum DuuDuuEngine {
         this.gameLoop.start();
     }
 
-    public final void exit() {
+    public final void EXIT() {
         this.gameLoop.stop();
     }
 
     // - ResourceLoader ------------------------------------------------------------------------------------------------
     private ResourceLoader resourceLoader;
 
-    public final void initResourceLoader(Class<Game> gameClass) {
-        if (resourceLoader != null) return;
-        resourceLoader = new ResourceLoader(gameClass);
+    public final void initResourceLoader() {
+        if (resourceLoader != null || game == null) return;
+        resourceLoader = new ResourceLoader(game.getClass());
         System.out.println("ResourceLoader ready!");
+    }
+
+    public final Texture LOAD_TEXTURE(String path) {
+        return resourceLoader.loadTexture(path);
     }
 
 }

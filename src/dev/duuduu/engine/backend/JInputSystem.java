@@ -1,7 +1,5 @@
 package dev.duuduu.engine.backend;
 
-import dev.duuduu.engine.backend.InputSystem;
-
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -25,7 +23,7 @@ public class JInputSystem extends InputSystem implements KeyListener {
     }
 
     @Override
-    public boolean isKeyPressed(int... key) {
+    public synchronized boolean isKeyPressed(int... key) {
         return pressedKeys[key[0]];
     }
 

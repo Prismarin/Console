@@ -17,11 +17,6 @@ public class ConsoleJInputSystem extends InputSystem implements KeyListener, Con
     }
 
     @Override
-    public boolean isKeyPressed(int... keys) {
-        return pressedKeys[keys[0] + CONTROLLER_SHIFT * keys[1]];
-    }
-
-    @Override
     public void keyPressed(KeyEvent e) {
         pressedKeys[e.getKeyCode()] = true;
     }
@@ -29,6 +24,11 @@ public class ConsoleJInputSystem extends InputSystem implements KeyListener, Con
     @Override
     public void keyReleased(KeyEvent e) {
         pressedKeys[e.getKeyCode()] = false;
+    }
+
+    @Override
+    public synchronized boolean isKeyPressed(int... keys) {
+        return pressedKeys[keys[0] + CONTROLLER_SHIFT * keys[1]];
     }
 
     // - unused --------------------------------------------------------------------------------------------------------

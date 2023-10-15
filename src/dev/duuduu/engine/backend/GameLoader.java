@@ -13,6 +13,9 @@ import java.util.jar.Manifest;
 
 public final class GameLoader {
 
+    @NotGarbage
+    private URLClassLoader classLoader;
+
     public @NotNull Game loadGame() {
         final File dir = new File("game");
         if (!dir.exists()) throw new RuntimeException("game folder does not exist, no game to load!");
@@ -20,7 +23,8 @@ public final class GameLoader {
         try (JarFile gameJar = new JarFile(gameFile)) {
             Manifest manifest = gameJar.getManifest();
             String gameClassPath = manifest.getMainAttributes().getValue("GameMain");
-            try (URLClassLoader classLoader = new URLClassLoader(new URL[] {gameFile.toURI().toURL()}, this.getClass().getClassLoader())) {
+            try {
+                classLoader = new URLClassLoader(new URL[] {gameFile.toURI().toURL()}, this.getClass().getClassLoader());
                 Class<Game> main = (Class<Game>) Class.forName(gameClassPath, true, classLoader);
                 return (Game) main.getConstructors()[0].newInstance();
             } catch (ClassNotFoundException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
