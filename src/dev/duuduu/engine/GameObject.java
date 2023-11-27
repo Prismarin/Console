@@ -28,6 +28,7 @@ public final class GameObject extends RawGameobject {
 
     public void setScript(Script script) {
         this.script = script;
+        script.setGameObject(this);
     }
 
     public void start() {
@@ -63,10 +64,27 @@ public final class GameObject extends RawGameobject {
         }
     }
 
+    public GameObject getParent() {
+        return parent;
+    }
+
     public void addChild(@NotNull GameObject gameObject) {
         if (running) gameObject.start();
         children.add(gameObject);
+        String name = gameObject.name;
+        if (gameObject.name.isEmpty()) gameObject.name = "" + gameObject.hashCode();
+        int iterator = 1;
+        while (!gameObject.setName(name)) {
+            name = gameObject.name + iterator;
+        }
         if (gameObject.parent != this) gameObject.setParent(this);
+        if (!gameObject.running && running) gameObject.start();
+    }
+
+    public void addChildren(@NotNull GameObject... gameObjects) {
+        for (GameObject gameObject : gameObjects) {
+            addChild(gameObject);
+        }
     }
 
     public int getChildCount() {
@@ -74,7 +92,9 @@ public final class GameObject extends RawGameobject {
     }
 
     public GameObject getChild(int index) {
-        return children.get(index);
+        if (children.size() > index) return children.get(index);
+        System.err.printf("Caught: ArrayIndexOutOfBoundsException! index %d is not in children.size()!\n", index);
+        return null;
     }
 
     public @Nullable GameObject getChild(String name) {
@@ -91,12 +111,14 @@ public final class GameObject extends RawGameobject {
     }
 
     public void removeChild(int index) {
-        children.get(index).queuedToRemove = true;
+        if (children.size() > index) children.get(index).queuedToRemove = true;
+        else System.err.printf("Caught: ArrayIndexOutOfBoundsException! index %d is not in children.size()!\n", index);
     }
 
     public void removeChild(String name) {
         GameObject child = getChild(name);
         if (child != null) child.queuedToRemove = true;
+        else System.err.printf("Child with name: \"%s\" not found\n", name);
     }
 
     public void queueFree() {
@@ -121,6 +143,14 @@ public final class GameObject extends RawGameobject {
 
     public String getName() {
         return name;
+    }
+
+    public boolean hasScript() {
+        return script != null;
+    }
+
+    public <T extends Script> T getScript(Class<T> tClass) {
+        return (T) script;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package dev.duuduu.engine;
 
 import dev.duuduu.engine.backend.*;
+import dev.duuduu.engine.backend.legacyCore.JWindow;
 import dev.duuduu.resources.Texture;
 
 import java.lang.reflect.Constructor;

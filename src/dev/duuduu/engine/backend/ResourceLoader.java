@@ -7,6 +7,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 
 public class ResourceLoader {
 
@@ -18,10 +19,9 @@ public class ResourceLoader {
 
     public Texture loadTexture(String path) {
         try {
-            InputStream in = clazz.getResourceAsStream(path);
-            assert in != null;
-            BufferedImage img = ImageIO.read(in);
-            in.close();
+            URL url = clazz.getResource(path);
+            assert url != null;
+            BufferedImage img = ImageIO.read(url);
             return new Texture(path, img);
         } catch (IOException e) {
             throw new RuntimeException(e);

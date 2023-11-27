@@ -1,4 +1,6 @@
-package dev.duuduu.engine.backend;
+package dev.duuduu.engine.backend.legacyCore;
+
+import dev.duuduu.engine.backend.InputSystem;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

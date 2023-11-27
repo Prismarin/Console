@@ -4,10 +4,18 @@ import dev.duuduu.engine.backend.Renderer;
 
 public class Script {
 
-    public final GameObject gameObject;
+    protected GameObject gameObject;
 
     public Script(GameObject gameObject) {
         this.gameObject = gameObject;
+    }
+
+    public Script() {
+        this.gameObject = null;
+    }
+
+    public void setGameObject(GameObject gameObject) {
+        if (this.gameObject == null) this.gameObject = gameObject;
     }
 
     public void start() {}

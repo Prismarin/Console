@@ -35,6 +35,7 @@ public final class GameLoop {
 
     public void singleThreadLoop() {
         try {
+            DuuDuuEngine.ENGINE.getWindow().threadInit();
             long lastTime = System.nanoTime();
             while (running) {
                 long now = System.nanoTime();
@@ -65,6 +66,7 @@ public final class GameLoop {
     }
 
     public void multiThreadRenderLoop() {
+        DuuDuuEngine.ENGINE.getWindow().threadInit();
         try {
             final long secInNano = 1000000000;
             long counter = 0;

@@ -8,6 +8,8 @@ public abstract class Window {
 
     public abstract void init(String... args);
 
+    public abstract void threadInit(Object... obj);
+
     public abstract <T extends InputSystem> void setInputSystem(Class<T> inputSystemClazz)
             throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException;
 
