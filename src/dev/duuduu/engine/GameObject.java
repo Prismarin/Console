@@ -28,6 +28,7 @@ public final class GameObject extends RawGameobject {
 
     public void setScript(Script script) {
         this.script = script;
+        script.setGameObject(this);
     }
 
     public void start() {
@@ -78,6 +79,12 @@ public final class GameObject extends RawGameobject {
         }
         if (gameObject.parent != this) gameObject.setParent(this);
         if (!gameObject.running && running) gameObject.start();
+    }
+
+    public void addChildren(@NotNull GameObject... gameObjects) {
+        for (GameObject gameObject : gameObjects) {
+            addChild(gameObject);
+        }
     }
 
     public int getChildCount() {
@@ -142,8 +149,8 @@ public final class GameObject extends RawGameobject {
         return script != null;
     }
 
-    public Script getScript() {
-        return script;
+    public <T extends Script> T getScript(Class<T> tClass) {
+        return (T) script;
     }
 
     @Override

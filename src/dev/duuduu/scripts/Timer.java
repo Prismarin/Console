@@ -27,6 +27,10 @@ public class Timer extends Script {
         this.runnable = () -> {};
     }
 
+    public Timer() {
+        this(null);
+    }
+
     @Override
     public void start() {
         if (firstStartCall) {

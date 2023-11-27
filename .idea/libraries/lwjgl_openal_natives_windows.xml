@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="lwjgl-openal-natives-windows">
+    <CLASSES>
+      <root url="jar://K:/Console/lib/lwjgl-3.2.3-windoof/lwjgl-openal-natives-windows.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

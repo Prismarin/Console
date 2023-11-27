@@ -15,6 +15,10 @@ public class Sprite extends Script2D {
         transform.size.y = texture.getImage().getHeight();
     }
 
+    public Sprite(Texture texture) {
+        this(null, texture);
+    }
+
     @Override
     public void render(Renderer renderer) {
         renderer.drawTexture(texture, transform);

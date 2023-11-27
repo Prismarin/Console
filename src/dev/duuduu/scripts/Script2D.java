@@ -22,10 +22,14 @@ public class Script2D extends Script {
         this.scale = this.transform.scale;
     }
 
+    public Script2D() {
+        this(null);
+    }
+
     public void syncParentPosition() {
         GameObject parent = gameObject.getParent();
         if (parent.hasScript()) {
-            Script2D parentScript = (Script2D) parent.getScript();
+            Script2D parentScript = parent.getScript(Script2D.class);
             this.position.x = parentScript.position.x;
             this.position.y = parentScript.position.y;
         }
