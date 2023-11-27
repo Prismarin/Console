@@ -1,7 +1,9 @@
-package dev.duuduu.engine.backend;
+package dev.duuduu.engine.backend.legacyCore;
 
 import dev.duuduu.engine.DuuDuuEngine;
-import dev.duuduu.engine.Vector2;
+import dev.duuduu.engine.Transform;
+import dev.duuduu.engine.backend.Renderer;
+import dev.duuduu.engine.backend.Window;
 import dev.duuduu.resources.Texture;
 
 import java.awt.*;
@@ -54,8 +56,8 @@ public class JRenderer extends Renderer {
     }
 
     @Override
-    public void drawTexture(Texture texture, Vector2 pos, Vector2 size) {
-        drawTexture(texture, (int) pos.x, (int) pos.y, (int) size.x, (int) size.y);
+    public void drawTexture(Texture texture, Transform transform) {
+        drawTexture(texture, (int) transform.pos.x, (int) transform.pos.y, (int) (transform.size.x * transform.scale.x), (int) (transform.size.y * transform.scale.y));
     }
 
     @Override

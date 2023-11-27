@@ -17,7 +17,7 @@ public class Sprite extends Script2D {
 
     @Override
     public void render(Renderer renderer) {
-        renderer.drawTexture(texture, transform.pos, transform.size);
+        renderer.drawTexture(texture, transform);
     }
 
 }

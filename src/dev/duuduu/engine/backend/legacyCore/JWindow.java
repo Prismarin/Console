@@ -1,6 +1,8 @@
-package dev.duuduu.engine.backend;
+package dev.duuduu.engine.backend.legacyCore;
 
 import dev.duuduu.engine.DuuDuuEngine;
+import dev.duuduu.engine.backend.InputSystem;
+import dev.duuduu.engine.backend.Window;
 
 import javax.swing.*;
 import java.awt.*;
@@ -39,6 +41,9 @@ public class JWindow extends Window {
         frame.setVisible(true);
         System.out.println("Window visible");
     }
+
+    @Override
+    public void threadInit(Object... obj) {}
 
     @Override
     public <T extends InputSystem> void setInputSystem(Class<T> inputSystemClazz)

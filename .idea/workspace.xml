@@ -10,24 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="">
-      <change afterPath="K:/Console/src/dev/duuduu/scripts/Sprite.java" afterDir="false" />
-      <change beforePath="K:/Console/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="K:/Console/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="K:/Console/.idea/misc.xml" beforeDir="false" afterPath="K:/Console/.idea/misc.xml" afterDir="false" />
       <change beforePath="K:/Console/.idea/workspace.xml" beforeDir="false" afterPath="K:/Console/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="K:/Console/Console.iml" beforeDir="false" afterPath="K:/Console/Console.iml" afterDir="false" />
       <change beforePath="K:/Console/game/TestGame.jar" beforeDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/GameObject.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/GameObject.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/Scene.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Scene.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/Transform.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Transform.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/GameLoader.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/GameLoader.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/JInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JInputSystem.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/JRenderer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JRenderer.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/JInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JInputSystem.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/JRenderer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JRenderer.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/JWindow.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JWindow.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/backend/Renderer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/Renderer.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/backend/ResourceLoader.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/ResourceLoader.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/SceneManager.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/SceneManager.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/resources/Texture.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/resources/Texture.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/scripts/TextureRenderer.java" beforeDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/Window.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/Window.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/scripts/Script2D.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/Script2D.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/scripts/Sprite.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/Sprite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +39,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -61,32 +61,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;K:/Console/game&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "K:/Console/game",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="K:\Console\game" />
       <recent name="K:\Console" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="K:\Console\lib" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.EntryPointGLFW">
     <configuration name="EntryPoint" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.duuduu.engine.backend.EntryPoint" />
       <module name="Console" />
@@ -94,7 +97,7 @@
       <option name="WORKING_DIRECTORY" value="K:/Console" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.duuduu.engine.backend.*" />
+          <option name="PATTERN" value="dev.duuduu.engine.backend.legacyCore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,9 +105,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EntryPointGLFW" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="dev.duuduu.engine.backend.EntryPoint" />
+      <module name="Console" />
+      <option name="PROGRAM_PARAMETERS" value="DEBUG --THREADS single" />
+      <option name="WORKING_DIRECTORY" value="K:/Console" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Threads" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.duuduu.Threads" />
+      <module name="Console" />
+      <option name="WORKING_DIRECTORY" value="K:/Console" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.duuduu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.EntryPointGLFW" />
+      <item itemvalue="Application.Threads" />
+      <item itemvalue="Application.EntryPoint" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.EntryPoint" />
+        <item itemvalue="Application.Threads" />
       </list>
     </recent_temporary>
   </component>

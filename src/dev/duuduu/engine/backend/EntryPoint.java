@@ -2,7 +2,8 @@ package dev.duuduu.engine.backend;
 
 import dev.duuduu.console.ConsoleJInputSystem;
 import dev.duuduu.engine.DuuDuuEngine;
-import dev.duuduu.engine.RawScene;
+import dev.duuduu.engine.backend.legacyCore.JInputSystem;
+import dev.duuduu.engine.backend.legacyCore.JWindow;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -45,22 +46,22 @@ public class EntryPoint {
         boolean jdkGraphics = arguments.contains("--LEGACY");
 
         // load engine here...
-        System.out.println("Starting " + DuuDuuEngine.VERSION + "...");
+        System.out.printf("Starting %s...\n", DuuDuuEngine.VERSION);
 
-        DuuDuuEngine.ENGINE.initWindow(JWindow.class);
+        if (jdkGraphics) DuuDuuEngine.ENGINE.initWindow(JWindow.class);
         DuuDuuEngine.ENGINE.initSceneManager();
         DuuDuuEngine.ENGINE.initGameLoop();
 
         // either load console or game
         if (!arguments.contains("CONSOLE")) {
             // load game
-            DuuDuuEngine.ENGINE.initInputSystem(JInputSystem.class);
+            if (jdkGraphics) DuuDuuEngine.ENGINE.initInputSystem(JInputSystem.class);
             DuuDuuEngine.ENGINE.initGame();
             DuuDuuEngine.ENGINE.initResourceLoader();
             DuuDuuEngine.ENGINE.loadGame();
         } else {
             // load console
-            DuuDuuEngine.ENGINE.initInputSystem(ConsoleJInputSystem.class);
+            if (jdkGraphics) DuuDuuEngine.ENGINE.initInputSystem(ConsoleJInputSystem.class);
         }
 
         DuuDuuEngine.ENGINE.loadFirstScene();

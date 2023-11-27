@@ -1,6 +1,6 @@
 package dev.duuduu.engine;
 
-import dev.duuduu.engine.backend.JRenderer;
+import dev.duuduu.engine.backend.legacyCore.JRenderer;
 import dev.duuduu.engine.backend.Renderer;
 
 public class Scene extends RawScene {

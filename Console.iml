@@ -17,5 +17,36 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="joml-1.10.5-javadoc" level="project" />
+    <orderEntry type="library" name="joml-1.10.5-sources" level="project" />
+    <orderEntry type="library" name="joml-1.10.5" level="project" />
+    <orderEntry type="library" name="lwjgl-assimp-javadoc" level="project" />
+    <orderEntry type="library" name="lwjgl-assimp-natives-windows" level="project" />
+    <orderEntry type="library" name="lwjgl-assimp-sources" level="project" />
+    <orderEntry type="library" name="lwjgl-assimp" level="project" />
+    <orderEntry type="library" name="lwjgl-glfw-javadoc" level="project" />
+    <orderEntry type="library" name="lwjgl-glfw-natives-windows" level="project" />
+    <orderEntry type="library" name="lwjgl-glfw-sources" level="project" />
+    <orderEntry type="library" name="lwjgl-glfw" level="project" />
+    <orderEntry type="library" name="lwjgl-javadoc" level="project" />
+    <orderEntry type="library" name="lwjgl-natives-windows" level="project" />
+    <orderEntry type="library" name="lwjgl-nfd-javadoc" level="project" />
+    <orderEntry type="library" name="lwjgl-nfd-natives-windows" level="project" />
+    <orderEntry type="library" name="lwjgl-nfd-sources" level="project" />
+    <orderEntry type="library" name="lwjgl-nfd" level="project" />
+    <orderEntry type="library" name="lwjgl-openal-javadoc" level="project" />
+    <orderEntry type="library" name="lwjgl-openal-natives-windows" level="project" />
+    <orderEntry type="library" name="lwjgl-openal-sources" level="project" />
+    <orderEntry type="library" name="lwjgl-openal" level="project" />
+    <orderEntry type="library" name="lwjgl-opengl-javadoc" level="project" />
+    <orderEntry type="library" name="lwjgl-opengl-natives-windows" level="project" />
+    <orderEntry type="library" name="lwjgl-opengl-sources" level="project" />
+    <orderEntry type="library" name="lwjgl-opengl" level="project" />
+    <orderEntry type="library" name="lwjgl-sources" level="project" />
+    <orderEntry type="library" name="lwjgl" level="project" />
+    <orderEntry type="library" name="lwjgl-stb-javadoc" level="project" />
+    <orderEntry type="library" name="lwjgl-stb-natives-windows" level="project" />
+    <orderEntry type="library" name="lwjgl-stb-sources" level="project" />
+    <orderEntry type="library" name="lwjgl-stb" level="project" />
   </component>
 </module>
