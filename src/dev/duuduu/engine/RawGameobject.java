@@ -6,7 +6,7 @@ import dev.duuduu.engine.backend.Renderer;
 public abstract class RawGameobject {
 
     @EngineEvent
-    public abstract void tick(float delta);
+    public abstract void tick(double delta);
 
     @EngineEvent
     public abstract void render(Renderer renderer);

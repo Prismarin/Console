@@ -20,7 +20,7 @@ public class Script {
 
     public void start() {}
 
-    public void tick(float delta) {}
+    public void tick(double delta) {}
 
     public void render(Renderer renderer) {}
 

@@ -11,8 +11,8 @@ public class Timer extends Script {
     public boolean autoStart;
     private boolean running;
     private boolean firstStartCall;
-    public float waitTime;
-    public float time;
+    public double waitTime;
+    public double time;
     private Runnable runnable;
 
     public Timer(GameObject gameObject) {
@@ -22,8 +22,8 @@ public class Timer extends Script {
         this.autoStart = true;
         this.running = false;
         this.firstStartCall = true;
-        this.waitTime = 1.f;
-        this.time = 0.f;
+        this.waitTime = 1.;
+        this.time = 0.;
         this.runnable = () -> {};
     }
 
@@ -42,7 +42,7 @@ public class Timer extends Script {
     }
 
     @Override
-    public void tick(float delta) {
+    public void tick(double delta) {
         if (running) {
             time += delta;
             if (time >= waitTime) {

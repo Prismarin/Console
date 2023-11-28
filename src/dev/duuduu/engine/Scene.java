@@ -35,7 +35,7 @@ public class Scene extends RawScene {
     }
 
     @Override
-    public void tick(float delta) {
+    public void tick(double delta) {
         root.tick(delta);
     }
 

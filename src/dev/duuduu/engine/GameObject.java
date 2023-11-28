@@ -40,7 +40,7 @@ public final class GameObject extends RawGameobject {
     }
 
     @Override
-    public void tick(float delta) {
+    public void tick(double delta) {
         if (script != null) script.tick(delta);
         if (children.isEmpty()) return;
         for (int i = 0, len = children.size(); i < len; i ++) {

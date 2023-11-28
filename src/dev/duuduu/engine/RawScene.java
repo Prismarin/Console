@@ -33,7 +33,7 @@ public abstract class RawScene {
     public abstract void onSceneLeft();
 
     @EngineEvent
-    public abstract void tick(float delta);
+    public abstract void tick(double delta);
 
     @EngineEvent
     public abstract void render(Renderer renderer);

@@ -6,6 +6,8 @@ public final class GameLoop {
 
     private final SceneManager sceneManager;
     private boolean running;
+    @NotGarbage
+    private String s;
 
     private int fps;
 
@@ -39,7 +41,8 @@ public final class GameLoop {
             long lastTime = System.nanoTime();
             while (running) {
                 long now = System.nanoTime();
-                float delta = (now - lastTime) / 1E9f;
+                double delta = (now - lastTime) / 1_000_000_000d;
+                s = String.format("%f", delta);
                 fps = (int) (1 / delta);
                 sceneManager.tick(delta);
                 Renderer renderer = sceneManager.getRenderer();
@@ -56,7 +59,8 @@ public final class GameLoop {
             long lastTime = System.nanoTime();
             while (running) {
                 long now = System.nanoTime();
-                float delta = (now - lastTime) / 10E9f;
+                double delta = (now - lastTime) / 1_000_000_000d;
+                s = String.format("%f", delta);
                 sceneManager.tick(delta);
                 lastTime = now;
             }

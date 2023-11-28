@@ -13,6 +13,8 @@ public class Script2D extends Script {
     public final Vector2 size;
     public final Vector2 scale;
 
+    public boolean syncParentPos = false;
+
     public Script2D(GameObject gameObject) {
         super(gameObject);
         this.transform = new Transform();
@@ -35,4 +37,8 @@ public class Script2D extends Script {
         }
     }
 
+    @Override
+    public void tick(double delta) {
+        if (syncParentPos) syncParentPosition();
+    }
 }

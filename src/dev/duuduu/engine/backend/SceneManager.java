@@ -33,7 +33,7 @@ public final class SceneManager {
         nextScene = scene;
     }
 
-    public void tick(float delta) {
+    public void tick(double delta) {
         // switching scene
         if (nextScene != null) {
             if (currentScene != null) currentScene.onSceneLeft();

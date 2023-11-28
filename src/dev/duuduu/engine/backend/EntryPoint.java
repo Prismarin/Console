@@ -1,5 +1,6 @@
 package dev.duuduu.engine.backend;
 
+import dev.duuduu.console.Console;
 import dev.duuduu.console.ConsoleJInputSystem;
 import dev.duuduu.engine.DuuDuuEngine;
 import dev.duuduu.engine.backend.legacyCore.JInputSystem;
@@ -8,6 +9,9 @@ import dev.duuduu.engine.backend.legacyCore.JWindow;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import static dev.duuduu.console.Console.CONSOLE;
+import static dev.duuduu.engine.DuuDuuEngine.ENGINE;
 
 public class EntryPoint {
 
@@ -21,52 +25,53 @@ public class EntryPoint {
         System.out.println("Gathering starting info...");
         ArrayList<String> arguments = new ArrayList<>(Arrays.asList(args));
 
-        DuuDuuEngine.ENGINE.initializeDebug(arguments.contains("DEBUG"));
+        ENGINE.initializeDebug(arguments.contains("DEBUG"));
 
         if (arguments.contains("--RESOLUTION")) {
             final int resolutionIndex = arguments.indexOf("--RESOLUTION");
             final int width = Integer.parseInt(arguments.get(resolutionIndex + 1));
             final int height = Integer.parseInt(arguments.get(resolutionIndex + 2));
-            DuuDuuEngine.ENGINE.SET_RESOLUTION(width, height);
+            ENGINE.SET_RESOLUTION(width, height);
         }
 
         if (arguments.contains("--TPS")) {
             final int tpsIndex = arguments.indexOf("--TPS");
-            DuuDuuEngine.ENGINE.TPS = Integer.parseInt(arguments.get(tpsIndex + 1));
+            ENGINE.TPS = Integer.parseInt(arguments.get(tpsIndex + 1));
         }
 
         if (arguments.contains("--THREADS")) {
             final int threadModeIndex = arguments.indexOf("--THREADS");
             final String threadMode = arguments.get(threadModeIndex + 1);
-            DuuDuuEngine.ENGINE.THREAD_MODE = ThreadMode.fromString(threadMode);
+            ENGINE.THREAD_MODE = ThreadMode.fromString(threadMode);
         } else {
-            DuuDuuEngine.ENGINE.THREAD_MODE = ThreadMode.MULTI;
+            ENGINE.THREAD_MODE = ThreadMode.MULTI;
         }
 
         boolean jdkGraphics = arguments.contains("--LEGACY");
 
         // load engine here...
-        System.out.printf("Starting %s...\n", DuuDuuEngine.VERSION);
+        System.out.printf("Starting %s...%n", DuuDuuEngine.VERSION);
 
-        if (jdkGraphics) DuuDuuEngine.ENGINE.initWindow(JWindow.class);
-        DuuDuuEngine.ENGINE.initSceneManager();
-        DuuDuuEngine.ENGINE.initGameLoop();
+        if (jdkGraphics) ENGINE.initWindow(JWindow.class);
+        ENGINE.initSceneManager();
+        ENGINE.initGameLoop();
 
         // either load console or game
         if (!arguments.contains("CONSOLE")) {
             // load game
-            if (jdkGraphics) DuuDuuEngine.ENGINE.initInputSystem(JInputSystem.class);
-            DuuDuuEngine.ENGINE.initGame();
-            DuuDuuEngine.ENGINE.initResourceLoader();
-            DuuDuuEngine.ENGINE.loadGame();
+            if (jdkGraphics) ENGINE.initInputSystem(JInputSystem.class);
+            ENGINE.initGame();
+            ENGINE.initResourceLoader();
+            ENGINE.loadGame();
         } else {
             // load console
-            if (jdkGraphics) DuuDuuEngine.ENGINE.initInputSystem(ConsoleJInputSystem.class);
+            CONSOLE.init();
+            if (jdkGraphics) ENGINE.initInputSystem(ConsoleJInputSystem.class);
         }
 
-        DuuDuuEngine.ENGINE.loadFirstScene();
-        DuuDuuEngine.ENGINE.startGameLoop();
-        System.out.printf("DuuDuuEngine started! %.0fms have passed.\n", ((System.nanoTime() - start) * 1E-6));
+        ENGINE.loadFirstScene();
+        ENGINE.startGameLoop();
+        System.out.printf("DuuDuuEngine started! %.0fms have passed.%n", ((System.nanoTime() - start) * 1E-6));
     }
 
 }
