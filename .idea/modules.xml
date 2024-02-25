@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://K:/Console/Console.iml" filepath="K:/Console/Console.iml" />
+      <module fileurl="file://K:/Console/TestGame/TestGame.iml" filepath="K:/Console/TestGame/TestGame.iml" />
     </modules>
   </component>
 </project>
