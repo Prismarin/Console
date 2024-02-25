@@ -9,47 +9,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="F">
-      <change afterPath="K:/Console/.idea/libraries/joml_1_10_5.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/joml_1_10_5_javadoc.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/joml_1_10_5_sources.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_assimp.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_assimp_javadoc.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_assimp_natives_windows.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_assimp_sources.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_glfw.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_glfw_javadoc.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_glfw_natives_windows.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_glfw_sources.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_javadoc.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_natives_windows.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_nfd.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_nfd_javadoc.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_nfd_natives_windows.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_nfd_sources.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_openal.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_openal_javadoc.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_openal_natives_windows.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_openal_sources.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_opengl.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_opengl_javadoc.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_opengl_natives_windows.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_opengl_sources.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_sources.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_stb.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_stb_javadoc.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_stb_natives_windows.xml" afterDir="false" />
-      <change afterPath="K:/Console/.idea/libraries/lwjgl_stb_sources.xml" afterDir="false" />
-      <change afterPath="K:/Console/TestGame/TestGame.iml" afterDir="false" />
-      <change afterPath="K:/Console/TestGame/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="K:/Console/TestGame/src/test/TestGame.java" afterDir="false" />
-      <change afterPath="K:/Console/game/TestGame.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="prefabs added, GameLoop, Engine, Console, EntryPoint, GameObject, Game, Scene, Timer, Script improved">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="K:/Console/Console.iml" beforeDir="false" afterPath="K:/Console/Console.iml" afterDir="false" />
+      <change beforePath="K:/Console/game/TestGame.jar" beforeDir="false" afterPath="K:/Console/game/TestGame.jar" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/console/Console.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/Console.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/console/ControllerButtons.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/ControllerButtons.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/Game.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Game.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/GameObject.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/GameObject.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/RawGameobject.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/RawGameobject.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/RawScene.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/RawScene.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/Resource.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Resource.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/Scene.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Scene.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/engine/Script.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Script.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/Transform.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Transform.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/Vector2.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Vector2.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EngineEvent.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EngineEvent.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EngineStart.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EngineStart.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/GameLoader.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/GameLoader.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/InputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/InputSystem.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/NotGarbage.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/NotGarbage.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/Renderer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/Renderer.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/ResourceLoader.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/ResourceLoader.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/SceneManager.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/SceneManager.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/ThreadMode.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/ThreadMode.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/Window.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/Window.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JInputSystem.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JRenderer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JRenderer.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JWindow.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JWindow.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/resources/Prefab.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/resources/Prefab.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/resources/Texture.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/resources/Texture.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/scripts/ColoredRect.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/ColoredRect.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/scripts/ColoredShape.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/ColoredShape.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/scripts/Script2D.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/Script2D.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/scripts/Sprite.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/Sprite.java" afterDir="false" />
       <change beforePath="K:/Console/src/dev/duuduu/scripts/Timer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/Timer.java" afterDir="false" />
@@ -86,32 +81,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "16",
-    "last_opened_file_path": "K:/Console/game",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;16&quot;,
+    &quot;last_opened_file_path&quot;: &quot;K:/Console/game&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="K:\Console\game" />
@@ -151,7 +146,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696174599459</updated>
-      <workItem from="1701111369867" duration="5146000" />
+      <workItem from="1701111369867" duration="5338000" />
+      <workItem from="1701161081507" duration="5496000" />
+      <workItem from="1701189310017" duration="20000" />
+      <workItem from="1701199219947" duration="20000" />
+      <workItem from="1702045288233" duration="23000" />
+      <workItem from="1706030166241" duration="1329000" />
+      <workItem from="1706042145052" duration="507000" />
+      <workItem from="1706212873133" duration="276000" />
+      <workItem from="1706454428703" duration="12000" />
+      <workItem from="1708770006182" duration="3995000" />
     </task>
     <task id="LOCAL-00001" summary="F">
       <option name="closed" value="true" />
@@ -161,7 +165,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701112528307</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Shapes and Rectangle">
+      <option name="closed" value="true" />
+      <created>1701117482797</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701117482797</updated>
+    </task>
+    <task id="LOCAL-00003" summary="prefabs added, GameLoop, Engine, Console, EntryPoint, GameObject, Game, Scene, Timer, Script improved">
+      <option name="closed" value="true" />
+      <created>1701174924555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701174924555</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +200,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="F" />
-    <option name="LAST_COMMIT_MESSAGE" value="F" />
+    <MESSAGE value="Shapes and Rectangle" />
+    <MESSAGE value="prefabs added, GameLoop, Engine, Console, EntryPoint, GameObject, Game, Scene, Timer, Script improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="prefabs added, GameLoop, Engine, Console, EntryPoint, GameObject, Game, Scene, Timer, Script improved" />
   </component>
 </project>
