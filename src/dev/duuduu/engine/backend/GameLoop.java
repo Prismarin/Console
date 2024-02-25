@@ -3,7 +3,6 @@ package dev.duuduu.engine.backend;
 import dev.duuduu.engine.DuuDuuEngine;
 
 public final class GameLoop {
-
     private final SceneManager sceneManager;
     private boolean running;
     @NotGarbage
@@ -100,5 +99,4 @@ public final class GameLoop {
     public void stop() {
         running = false;
     }
-
 }

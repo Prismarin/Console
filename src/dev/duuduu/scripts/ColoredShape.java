@@ -7,7 +7,6 @@ import dev.duuduu.engine.backend.Renderer;
 import java.awt.*;
 
 public abstract class ColoredShape extends Script2D {
-
     public int color;
     public boolean fill;
 
@@ -26,5 +25,4 @@ public abstract class ColoredShape extends Script2D {
     public abstract void render(Renderer renderer);
 
     public abstract boolean containsPoint(Vector2 point);
-
 }

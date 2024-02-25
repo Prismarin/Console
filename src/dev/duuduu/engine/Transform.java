@@ -1,7 +1,6 @@
 package dev.duuduu.engine;
 
 public class Transform {
-
     public final Vector2 position, pos;
 
     public final Vector2 size;
@@ -24,5 +23,4 @@ public class Transform {
         this.scale.x = scale.x;
         this.scale.y = scale.y;
     }
-
 }

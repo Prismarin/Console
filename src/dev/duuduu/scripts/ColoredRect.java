@@ -6,7 +6,6 @@ import dev.duuduu.engine.Vector2;
 import dev.duuduu.engine.backend.Renderer;
 
 public class ColoredRect extends ColoredShape {
-
     public ColoredRect() {
         this(null);
     }
@@ -58,5 +57,4 @@ public class ColoredRect extends ColoredShape {
     public boolean containsPoint(Vector2 point) {
         return point.x >= position.x && point.x <= position.x + (size.x * scale.x) && point.y >= position.y && point.y <= position.y + (size.y * scale.y);
     }
-
 }

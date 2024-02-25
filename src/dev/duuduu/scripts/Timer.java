@@ -6,7 +6,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class Timer extends Script {
-
     public boolean repeat;
     public boolean autoStart;
     private boolean running;
@@ -48,6 +47,9 @@ public class Timer extends Script {
             if (time >= waitTime) {
                 runnable.run();
                 time -= waitTime;
+                if (!repeat) {
+                    running = false;
+                }
             }
         }
     }
@@ -65,4 +67,25 @@ public class Timer extends Script {
         if (this.runnable == null) this.runnable = () -> {};
     }
 
+    // -----------------------------------------------------------------------------------------------------------------
+
+    /**
+     *
+     * @param waitTime the time in seconds
+     * @return the time in fps
+     */
+    public static double fromWaitTimeToFps(double waitTime) {
+        assert waitTime != 0;
+        return 1 / waitTime;
+    }
+
+    /**
+     *
+     * @param fps the time in fps
+     * @return the time in waitTime
+     */
+    public static double fromFpsToWaitTime(double fps) {
+        assert fps != 0;
+        return 1 / fps;
+    }
 }

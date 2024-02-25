@@ -1,7 +1,6 @@
 package dev.duuduu.engine.backend;
 
 public enum ThreadMode {
-
     SINGLE, MULTI;
 
     public static ThreadMode fromString(String s) {
@@ -9,5 +8,4 @@ public enum ThreadMode {
         if (s.equals("multi")) return MULTI;
         return null;
     }
-
 }

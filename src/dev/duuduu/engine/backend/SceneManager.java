@@ -9,7 +9,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashMap;
 
 public final class SceneManager {
-
     private RawScene currentScene, nextScene;
     private final HashMap<String, RawScene> registeredScenes;
 
@@ -66,5 +65,4 @@ public final class SceneManager {
         }
         return null;
     }
-
 }

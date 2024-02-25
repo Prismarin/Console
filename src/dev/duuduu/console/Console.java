@@ -1,7 +1,6 @@
 package dev.duuduu.console;
 
 public enum Console {
-
     CONSOLE;
 
     public void init() {
@@ -19,5 +18,4 @@ public enum Console {
     public boolean IS_CONSOLE_ACTIVE() {
         return consoleActive;
     }
-
 }

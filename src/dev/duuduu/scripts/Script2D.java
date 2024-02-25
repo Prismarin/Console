@@ -6,7 +6,6 @@ import dev.duuduu.engine.Transform;
 import dev.duuduu.engine.Vector2;
 
 public class Script2D extends Script {
-
     public Transform transform;
 
     public final Vector2 position;

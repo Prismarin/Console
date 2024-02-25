@@ -10,7 +10,6 @@ import java.lang.reflect.InvocationTargetException;
 import static dev.duuduu.console.Console.CONSOLE;
 
 public enum DuuDuuEngine {
-
     ENGINE;
 
     public static final String VERSION = "DuuDuuEngine pre alpha 2.0.0";
@@ -190,5 +189,4 @@ public enum DuuDuuEngine {
     public final Texture LOAD_TEXTURE(String path) {
         return resourceLoader.loadTexture(path);
     }
-
 }

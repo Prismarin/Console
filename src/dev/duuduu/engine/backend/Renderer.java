@@ -5,7 +5,6 @@ import dev.duuduu.engine.Vector2;
 import dev.duuduu.resources.Texture;
 
 public abstract class Renderer {
-
     public abstract void prepare();
 
     public abstract boolean isCompatibleToWindow();
@@ -19,5 +18,4 @@ public abstract class Renderer {
     public abstract void drawTexture(Texture texture, Transform transform);
 
     public abstract void show();
-
 }

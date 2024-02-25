@@ -12,7 +12,6 @@ import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
 public final class GameLoader {
-
     @NotGarbage
     private URLClassLoader classLoader;
 
@@ -49,5 +48,4 @@ public final class GameLoader {
         if (gameFile == null) throw new RuntimeException("No game file found.");
         return gameFile;
     }
-
 }

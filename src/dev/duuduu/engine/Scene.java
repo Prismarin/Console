@@ -4,7 +4,6 @@ import dev.duuduu.engine.backend.legacyCore.JRenderer;
 import dev.duuduu.engine.backend.Renderer;
 
 public class Scene extends RawScene {
-
     private final Renderer defaultRenderer;
     private final GameObject root;
 
@@ -47,5 +46,4 @@ public class Scene extends RawScene {
     public GameObject getRoot() {
         return root;
     }
-
 }

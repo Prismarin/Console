@@ -3,7 +3,6 @@ package dev.duuduu.engine;
 import org.jetbrains.annotations.NotNull;
 
 public class Vector2 {
-
     public float x, y;
 
     public Vector2() {
@@ -39,5 +38,4 @@ public class Vector2 {
         float length = length();
         return new Vector2(x / length, y / length);
     }
-
 }

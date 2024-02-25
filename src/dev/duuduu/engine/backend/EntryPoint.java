@@ -14,7 +14,6 @@ import static dev.duuduu.console.Console.CONSOLE;
 import static dev.duuduu.engine.DuuDuuEngine.ENGINE;
 
 public class EntryPoint {
-
     /**
      *
      * @param args DEBUG CONSOLE --RESOLUTION [WIDTH = 1280] [HEIGHT = 720] --TPS [TPS = 60] --THREADS [MODE = multi] --LEGACY
@@ -73,5 +72,4 @@ public class EntryPoint {
         ENGINE.startGameLoop();
         System.out.printf("DuuDuuEngine started! %.0fms have passed.%n", ((System.nanoTime() - start) * 1E-6));
     }
-
 }

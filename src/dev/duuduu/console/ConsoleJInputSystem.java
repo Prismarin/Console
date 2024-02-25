@@ -6,7 +6,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class ConsoleJInputSystem extends InputSystem implements KeyListener, ControllerButtons {
-
     public static final int CONTROLLER_SHIFT = 16;
 
     private boolean[] pressedKeys;
@@ -34,13 +33,8 @@ public class ConsoleJInputSystem extends InputSystem implements KeyListener, Con
     // - unused --------------------------------------------------------------------------------------------------------
 
     @Override
-    public void poll() {
-
-    }
+    public void poll() {}
 
     @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
-
+    public void keyTyped(KeyEvent e) {}
 }

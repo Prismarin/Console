@@ -4,7 +4,6 @@ import dev.duuduu.engine.backend.EngineEvent;
 import dev.duuduu.engine.backend.Renderer;
 
 public abstract class RawGameobject {
-
     @EngineEvent
     public abstract void tick(double delta);
 
@@ -14,5 +13,4 @@ public abstract class RawGameobject {
     public boolean isRaw() {
         return true;
     }
-
 }
