@@ -7,7 +7,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 
 public final class GameObject extends RawGameobject {
-
     private boolean queuedToRemove;
     private String name;
     private Script script;
@@ -40,7 +39,7 @@ public final class GameObject extends RawGameobject {
     }
 
     @Override
-    public void tick(float delta) {
+    public void tick(double delta) {
         if (script != null) script.tick(delta);
         if (children.isEmpty()) return;
         for (int i = 0, len = children.size(); i < len; i ++) {
@@ -161,5 +160,4 @@ public final class GameObject extends RawGameobject {
     public GameObject getRoot() {
         return DuuDuuEngine.ENGINE.getRoot();
     }
-
 }

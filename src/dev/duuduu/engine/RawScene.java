@@ -4,7 +4,6 @@ import dev.duuduu.engine.backend.EngineEvent;
 import dev.duuduu.engine.backend.Renderer;
 
 public abstract class RawScene {
-
     protected String name;
     private boolean registered;
 
@@ -33,7 +32,7 @@ public abstract class RawScene {
     public abstract void onSceneLeft();
 
     @EngineEvent
-    public abstract void tick(float delta);
+    public abstract void tick(double delta);
 
     @EngineEvent
     public abstract void render(Renderer renderer);
@@ -49,5 +48,4 @@ public abstract class RawScene {
     public final boolean isRegistered() {
         return registered;
     }
-
 }

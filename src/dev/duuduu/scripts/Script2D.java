@@ -6,12 +6,13 @@ import dev.duuduu.engine.Transform;
 import dev.duuduu.engine.Vector2;
 
 public class Script2D extends Script {
-
     public Transform transform;
 
     public final Vector2 position;
     public final Vector2 size;
     public final Vector2 scale;
+
+    public boolean syncParentPos = false;
 
     public Script2D(GameObject gameObject) {
         super(gameObject);
@@ -35,4 +36,8 @@ public class Script2D extends Script {
         }
     }
 
+    @Override
+    public void tick(double delta) {
+        if (syncParentPos) syncParentPosition();
+    }
 }

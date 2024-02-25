@@ -10,7 +10,6 @@ import java.io.InputStream;
 import java.net.URL;
 
 public class ResourceLoader {
-
     private final Class<? extends Game> clazz;
 
     public ResourceLoader(Class<? extends Game> clazz) {
@@ -27,5 +26,4 @@ public class ResourceLoader {
             throw new RuntimeException(e);
         }
     }
-
 }

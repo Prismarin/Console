@@ -6,7 +6,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class JInputSystem extends InputSystem implements KeyListener {
-
     private boolean[] pressedKeys;
 
     @Override
@@ -36,5 +35,4 @@ public class JInputSystem extends InputSystem implements KeyListener {
 
     @Override
     public void poll() {}
-
 }

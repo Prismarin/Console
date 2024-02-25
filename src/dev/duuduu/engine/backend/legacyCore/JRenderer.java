@@ -11,7 +11,6 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 
 public class JRenderer extends Renderer {
-
     private final Window window;
     private final BufferStrategy bs;
     private Graphics g;
@@ -70,5 +69,4 @@ public class JRenderer extends Renderer {
         screenG.dispose();
         bs.show();
     }
-
 }

@@ -4,7 +4,6 @@ import dev.duuduu.engine.backend.legacyCore.JRenderer;
 import dev.duuduu.engine.backend.Renderer;
 
 public class Scene extends RawScene {
-
     private final Renderer defaultRenderer;
     private final GameObject root;
 
@@ -35,7 +34,7 @@ public class Scene extends RawScene {
     }
 
     @Override
-    public void tick(float delta) {
+    public void tick(double delta) {
         root.tick(delta);
     }
 
@@ -47,5 +46,4 @@ public class Scene extends RawScene {
     public GameObject getRoot() {
         return root;
     }
-
 }

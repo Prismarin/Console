@@ -12,7 +12,6 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class JWindow extends Window {
-
     private JFrame frame;
     private Canvas canvas;
 
@@ -88,5 +87,4 @@ public class JWindow extends Window {
         if (canvas.getBufferStrategy() == null) canvas.createBufferStrategy(3);
         return canvas.getBufferStrategy();
     }
-
 }

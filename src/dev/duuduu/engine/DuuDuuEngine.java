@@ -7,8 +7,9 @@ import dev.duuduu.resources.Texture;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-public enum DuuDuuEngine {
+import static dev.duuduu.console.Console.CONSOLE;
 
+public enum DuuDuuEngine {
     ENGINE;
 
     public static final String VERSION = "DuuDuuEngine pre alpha 2.0.0";
@@ -73,7 +74,7 @@ public enum DuuDuuEngine {
     }
 
     public final void loadGame() {
-        game.load();
+        game.load(CONSOLE.IS_CONSOLE_ACTIVE());
         WINDOW_TITLE(game.windowTitle);
     }
 
@@ -188,5 +189,4 @@ public enum DuuDuuEngine {
     public final Texture LOAD_TEXTURE(String path) {
         return resourceLoader.loadTexture(path);
     }
-
 }

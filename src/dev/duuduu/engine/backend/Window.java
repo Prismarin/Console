@@ -3,7 +3,6 @@ package dev.duuduu.engine.backend;
 import java.lang.reflect.InvocationTargetException;
 
 public abstract class Window {
-
     public InputSystem inputSystem;
 
     public abstract void init(String... args);
@@ -22,5 +21,4 @@ public abstract class Window {
     public abstract void setTitle(String title);
 
     public abstract String getTitle();
-
 }

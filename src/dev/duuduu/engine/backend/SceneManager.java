@@ -9,7 +9,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashMap;
 
 public final class SceneManager {
-
     private RawScene currentScene, nextScene;
     private final HashMap<String, RawScene> registeredScenes;
 
@@ -33,7 +32,7 @@ public final class SceneManager {
         nextScene = scene;
     }
 
-    public void tick(float delta) {
+    public void tick(double delta) {
         // switching scene
         if (nextScene != null) {
             if (currentScene != null) currentScene.onSceneLeft();
@@ -66,5 +65,4 @@ public final class SceneManager {
         }
         return null;
     }
-
 }
