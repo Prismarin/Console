@@ -9,45 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="prefabs added, GameLoop, Engine, Console, EntryPoint, GameObject, Game, Scene, Timer, Script improved">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="refactor">
+      <change afterPath="K:/Console/src/dev/duuduu/engine/Vector3.java" afterDir="false" />
+      <change afterPath="K:/Console/src/dev/duuduu/engine/backend/Experimental.java" afterDir="false" />
+      <change afterPath="K:/Console/src/dev/duuduu/resources/TilemapData.java" afterDir="false" />
+      <change afterPath="K:/Console/src/dev/duuduu/scripts/AnimatedTile.java" afterDir="false" />
+      <change afterPath="K:/Console/src/dev/duuduu/scripts/StaticTile.java" afterDir="false" />
+      <change afterPath="K:/Console/src/dev/duuduu/scripts/Tile.java" afterDir="false" />
+      <change afterPath="K:/Console/src/dev/duuduu/scripts/Tilemap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="K:/Console/game/TestGame.jar" beforeDir="false" afterPath="K:/Console/game/TestGame.jar" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/console/Console.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/Console.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/ConsoleJInputSystem.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/console/ControllerButtons.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/console/ControllerButtons.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/DuuDuuEngine.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/Game.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Game.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/GameObject.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/GameObject.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/RawGameobject.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/RawGameobject.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/RawScene.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/RawScene.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/Resource.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Resource.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/Scene.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Scene.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/Script.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Script.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/Transform.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Transform.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/Vector2.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/Vector2.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EngineEvent.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EngineEvent.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EngineStart.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EngineStart.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/EntryPoint.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/GameLoader.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/GameLoader.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/GameLoop.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/InputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/InputSystem.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/NotGarbage.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/NotGarbage.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/Renderer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/Renderer.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/ResourceLoader.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/ResourceLoader.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/SceneManager.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/SceneManager.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/ThreadMode.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/ThreadMode.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/Window.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/Window.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JInputSystem.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JInputSystem.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JRenderer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JRenderer.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JWindow.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/engine/backend/legacyCore/JWindow.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/resources/Prefab.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/resources/Prefab.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/resources/Texture.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/resources/Texture.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/scripts/ColoredRect.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/ColoredRect.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/scripts/ColoredShape.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/ColoredShape.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/scripts/Script2D.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/Script2D.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/scripts/Sprite.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/Sprite.java" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/scripts/Timer.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/scripts/Timer.java" afterDir="false" />
+      <change beforePath="K:/Console/src/dev/duuduu/resources/Animation.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/resources/Animation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +127,9 @@
       <workItem from="1706212873133" duration="276000" />
       <workItem from="1706454428703" duration="12000" />
       <workItem from="1708770006182" duration="3995000" />
+      <workItem from="1708858418628" duration="2257000" />
+      <workItem from="1708961557965" duration="1069000" />
+      <workItem from="1709310272884" duration="2989000" />
     </task>
     <task id="LOCAL-00001" summary="F">
       <option name="closed" value="true" />
@@ -181,7 +155,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701174924555</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1708858463338</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708858463338</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1708858518013</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708858518013</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +192,7 @@
     <MESSAGE value="F" />
     <MESSAGE value="Shapes and Rectangle" />
     <MESSAGE value="prefabs added, GameLoop, Engine, Console, EntryPoint, GameObject, Game, Scene, Timer, Script improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="prefabs added, GameLoop, Engine, Console, EntryPoint, GameObject, Game, Scene, Timer, Script improved" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>
