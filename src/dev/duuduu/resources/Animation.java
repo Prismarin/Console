@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 public class Animation {
     public Texture[] textures;
     public final int fps;
-    private final Timer timer;
+    public final Timer timer;
     public int frame;
 
     public Animation(int fps, Texture @NotNull [] textures) {
@@ -24,6 +24,14 @@ public class Animation {
         this.timer.start();
     }
 
+    public void start() {
+        timer.start();
+    }
+
+    public void stop() {
+        timer.stop();
+    }
+
     public void setFps(int fps) {
         try {
             this.getClass().getDeclaredField("fps").set(this, fps);
@@ -35,6 +43,14 @@ public class Animation {
     }
 
     public Texture getAnimationFrame() {
+        return textures[frame];
+    }
+
+    public int frameCount() {
+        return textures.length;
+    }
+
+    public Texture getFrame(int frame) {
         return textures[frame];
     }
 
