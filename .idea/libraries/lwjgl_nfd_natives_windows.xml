@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="lwjgl-nfd-natives-windows">
-    <CLASSES>
-      <root url="jar://K:/Console/lib/lwjgl-3.2.3-windoof/lwjgl-nfd-natives-windows.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

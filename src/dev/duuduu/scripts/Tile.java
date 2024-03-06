@@ -2,17 +2,20 @@ package dev.duuduu.scripts;
 
 import dev.duuduu.engine.Transform;
 import dev.duuduu.engine.backend.Renderer;
+import dev.duuduu.resources.Animation;
 import dev.duuduu.resources.Texture;
-
-import java.awt.image.BufferedImage;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 public abstract class Tile {
-    public static StaticTile createStaticTile() {
-        return null;
+    @Contract("_ -> new")
+    public static @NotNull StaticTile createStaticTile(Texture texture) {
+        return new StaticTile(texture);
     }
 
-    public static Tile createAnimatedTile() {
-        return null;
+    @Contract("_ -> new")
+    public static @NotNull AnimatedTile createAnimatedTile(Animation animation) {
+        return new AnimatedTile(animation);
     }
 
     // -----------------------------------------------------------------------------------------------------------------

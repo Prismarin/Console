@@ -2,23 +2,67 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="TestGame" />
+      <artifact name="Console:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="refactor">
-      <change afterPath="K:/Console/src/dev/duuduu/engine/Vector3.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/engine/backend/Experimental.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/resources/TilemapData.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/scripts/AnimatedTile.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/scripts/StaticTile.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/scripts/Tile.java" afterDir="false" />
-      <change afterPath="K:/Console/src/dev/duuduu/scripts/Tilemap.java" afterDir="false" />
+    <list default="true" id="12937ad7-13f6-46b7-ba4e-c1d257398356" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/TestGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/TestGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestGame/src/test/Snake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestGame/src/test/SnakeScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestGame/src/test/apple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestGame/src/test/snake.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Console_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Console_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/joml_1_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/joml_1_10_5_javadoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/joml_1_10_5_sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_assimp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_assimp_javadoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_assimp_natives_windows.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_assimp_sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_glfw.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_glfw_javadoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_glfw_natives_windows.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_glfw_sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_javadoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_natives_windows.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_nfd.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_nfd_javadoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_nfd_natives_windows.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_nfd_sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_openal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_openal_javadoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_openal_natives_windows.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_openal_sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_opengl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_opengl_javadoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_opengl_natives_windows.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_opengl_sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_stb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_stb_javadoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_stb_natives_windows.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl_stb_sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="K:/Console/src/dev/duuduu/resources/Animation.java" beforeDir="false" afterPath="K:/Console/src/dev/duuduu/resources/Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Console.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestGame/TestGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestGame/TestGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestGame/src/test/TestGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestGame/src/test/TestGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/TestGame.jar" beforeDir="false" afterPath="$PROJECT_DIR$/game/TestGame.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/duuduu/engine/Vector2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/duuduu/engine/Vector2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/duuduu/engine/backend/EntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/duuduu/engine/backend/EntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/duuduu/resources/TilemapData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/duuduu/resources/TilemapData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/duuduu/scripts/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/duuduu/scripts/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/duuduu/scripts/Tilemap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/duuduu/scripts/Tilemap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,25 +72,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="K:/Console" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2WATtTHnC1UdTqllkSG2pD6wFAw" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
+  <component name="ProjectId" id="2dFOsot0UeUQ5HjfpAJlS1PLCVl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -54,42 +92,24 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;16&quot;,
-    &quot;last_opened_file_path&quot;: &quot;K:/Console/game&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kelvi.LAPTOP-VI7BRM63/IdeaProjects/Console/game&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="K:\Console\game" />
-      <recent name="K:\Console" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration name="EntryPoint" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
+    <configuration name="EntryPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.duuduu.engine.backend.EntryPoint" />
       <module name="Console" />
-      <option name="PROGRAM_PARAMETERS" value="DEBUG --LEGACY --THREADS multi" />
-      <option name="WORKING_DIRECTORY" value="K:/Console" />
+      <option name="PROGRAM_PARAMETERS" value="DEBUG --THREADS single --LEGACY" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dev.duuduu.engine.backend.*" />
@@ -97,10 +117,10 @@
         </pattern>
       </extension>
       <method v="2">
-        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="TestGame" />
         </option>
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
@@ -112,87 +132,15 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c38a754e-4854-405e-aee7-63bfdd04e288" name="Changes" comment="" />
-      <created>1696174599459</created>
+      <changelist id="12937ad7-13f6-46b7-ba4e-c1d257398356" name="Changes" comment="" />
+      <created>1709600571039</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1696174599459</updated>
-      <workItem from="1701111369867" duration="5338000" />
-      <workItem from="1701161081507" duration="5496000" />
-      <workItem from="1701189310017" duration="20000" />
-      <workItem from="1701199219947" duration="20000" />
-      <workItem from="1702045288233" duration="23000" />
-      <workItem from="1706030166241" duration="1329000" />
-      <workItem from="1706042145052" duration="507000" />
-      <workItem from="1706212873133" duration="276000" />
-      <workItem from="1706454428703" duration="12000" />
-      <workItem from="1708770006182" duration="3995000" />
-      <workItem from="1708858418628" duration="2257000" />
-      <workItem from="1708961557965" duration="1069000" />
-      <workItem from="1709310272884" duration="2989000" />
+      <updated>1709600571039</updated>
     </task>
-    <task id="LOCAL-00001" summary="F">
-      <option name="closed" value="true" />
-      <created>1701112528307</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1701112528307</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Shapes and Rectangle">
-      <option name="closed" value="true" />
-      <created>1701117482797</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1701117482797</updated>
-    </task>
-    <task id="LOCAL-00003" summary="prefabs added, GameLoop, Engine, Console, EntryPoint, GameObject, Game, Scene, Timer, Script improved">
-      <option name="closed" value="true" />
-      <created>1701174924555</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1701174924555</updated>
-    </task>
-    <task id="LOCAL-00004" summary="refactor">
-      <option name="closed" value="true" />
-      <created>1708858463338</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1708858463338</updated>
-    </task>
-    <task id="LOCAL-00005" summary="refactor">
-      <option name="closed" value="true" />
-      <created>1708858518013</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1708858518013</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="F" />
-    <MESSAGE value="Shapes and Rectangle" />
-    <MESSAGE value="prefabs added, GameLoop, Engine, Console, EntryPoint, GameObject, Game, Scene, Timer, Script improved" />
-    <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

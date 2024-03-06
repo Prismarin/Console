@@ -1,10 +1,9 @@
 <component name="ArtifactManager">
-  <artifact name="Console:jar">
-    <output-path>K:/Console/out/artifacts/Console_jar</output-path>
-    <root id="root">
-      <element id="archive" name="Console.jar">
-        <element id="module-output" name="Console" />
-      </element>
+  <artifact type="jar" name="Console:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Console_jar</output-path>
+    <root id="archive" name="Console.jar">
+      <element id="module-output" name="Console" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/annotations/24.0.0/annotations-24.0.0.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

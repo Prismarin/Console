@@ -1,6 +1,5 @@
 package dev.duuduu.engine.backend;
 
-import dev.duuduu.console.Console;
 import dev.duuduu.console.ConsoleJInputSystem;
 import dev.duuduu.engine.DuuDuuEngine;
 import dev.duuduu.engine.backend.legacyCore.JInputSystem;
@@ -52,6 +51,7 @@ public class EntryPoint {
         System.out.printf("Starting %s...%n", DuuDuuEngine.VERSION);
 
         if (jdkGraphics) ENGINE.initWindow(JWindow.class);
+        else ENGINE.initWindow(JWindow.class);
         ENGINE.initSceneManager();
         ENGINE.initGameLoop();
 
@@ -59,6 +59,7 @@ public class EntryPoint {
         if (!arguments.contains("CONSOLE")) {
             // load game
             if (jdkGraphics) ENGINE.initInputSystem(JInputSystem.class);
+            else ENGINE.initInputSystem(JInputSystem.class);
             ENGINE.initGame();
             ENGINE.initResourceLoader();
             ENGINE.loadGame();
@@ -66,6 +67,7 @@ public class EntryPoint {
             // load console
             CONSOLE.init();
             if (jdkGraphics) ENGINE.initInputSystem(ConsoleJInputSystem.class);
+            else ENGINE.initInputSystem(ConsoleJInputSystem.class);
         }
 
         ENGINE.loadFirstScene();

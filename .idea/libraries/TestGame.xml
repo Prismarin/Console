@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="lwjgl-stb">
+  <library name="TestGame">
     <CLASSES>
-      <root url="jar://K:/Console/lib/lwjgl-3.2.3-windoof/lwjgl-stb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/game/TestGame.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
