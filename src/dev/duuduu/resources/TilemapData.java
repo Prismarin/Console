@@ -52,7 +52,7 @@ public class TilemapData {
 
         width = (int) (downRight.x - upLeft.x);
         height = (int) (downRight.y - upLeft.y);
-        tiles = new int[(width) * (height)];
+        tiles = new int[width * height];
 
         Arrays.fill(tiles, -1);
 
@@ -61,6 +61,17 @@ public class TilemapData {
             i = (int) (tileDataPiece.y * width + tileDataPiece.x);
             if (i < tiles.length) tiles[i] = (int) tileDataPiece.z;
         }
+    }
+
+    public void createTiles(Vector2 upLeft, int width, int height) {
+        this.width = width;
+        this.height = height;
+        tiles = new int[width * height];
+        this.upLeft.x = upLeft.x;
+        this.upLeft.y = upLeft.y;
+        this.downRight.x = upLeft.x + width;
+        this.downRight.y = upLeft.y + height;
+        Arrays.fill(tiles, -1);
     }
 
     public void renderTilemapData(Renderer renderer, ArrayList<Tile> atlas) {
