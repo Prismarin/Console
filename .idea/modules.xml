@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Console.iml" filepath="$PROJECT_DIR$/Console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ConsoleControllerServer/ConsoleControllerServer.iml" filepath="$PROJECT_DIR$/ConsoleControllerServer/ConsoleControllerServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestGame/TestGame.iml" filepath="$PROJECT_DIR$/TestGame/TestGame.iml" />
     </modules>
   </component>
